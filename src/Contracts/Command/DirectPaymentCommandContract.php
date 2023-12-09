@@ -1,0 +1,20 @@
+<?php
+
+namespace Shahmal1yev\EasyPay\Yigim\Contracts\Command;
+
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\AmountCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\BillerCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\CommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\CscCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\CurrencyCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\ExpiryCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\ExtraCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\PanCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\ReferenceCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\TokenCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\TypeCommandAttributeContract;
+
+interface DirectPaymentCommandContract extends CommandAttributeContract, TypeCommandAttributeContract, BillerCommandAttributeContract, AmountCommandAttributeContract, ExpiryCommandAttributeContract, TokenCommandAttributeContract, PanCommandAttributeContract, CscCommandAttributeContract, CurrencyCommandAttributeContract, ExtraCommandAttributeContract, ReferenceCommandAttributeContract
+{
+
+}
