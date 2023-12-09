@@ -1,0 +1,19 @@
+{
+    "name": "shahmal1yev/php-easypay-yigim",
+    "description": "PHP EasyPay YIĞIM is a PHP package that seamlessly integrates YIĞIM payment services into your PHP projects.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Shahmal1yev\\EasyPay\\Yigim\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Eldar Shahmaliyev",
+            "email": "shahmal1yev@mail.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
