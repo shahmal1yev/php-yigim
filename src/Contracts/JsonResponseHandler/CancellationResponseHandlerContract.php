@@ -1,0 +1,12 @@
+<?php
+
+namespace Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandler;
+
+use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlerAttribute\CodeJsonResponseHandlerAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlerAttribute\JsonResponseHandlerAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlerAttribute\MessageJsonResponseHandlerAttributeContract;
+
+interface CancellationResponseHandlerContract extends JsonResponseHandlerAttributeContract, MessageJsonResponseHandlerAttributeContract, CodeJsonResponseHandlerAttributeContract
+{
+
+}
