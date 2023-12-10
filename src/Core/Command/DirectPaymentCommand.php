@@ -1,6 +1,6 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Command;
+namespace Shahmal1yev\EasyPay\Yigim\Core\Command;
 
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\AmountCommandAttributeContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\BillerCommandAttributeContract;

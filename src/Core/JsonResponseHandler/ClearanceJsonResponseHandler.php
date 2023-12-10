@@ -1,6 +1,6 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\JsonResponseHandler;
+namespace Shahmal1yev\EasyPay\Yigim\Core\JsonResponseHandler;
 
 use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandler\ClearanceJsonResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttribute\CodeJsonResponseHandlerAttributeTrait;
