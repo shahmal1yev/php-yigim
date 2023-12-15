@@ -2,6 +2,7 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Core\JsonResponseHandler;
 
+use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandler\JsonResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandler\StatusJsonResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttribute\AmountJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttribute\ApprovalJsonResponseHandlerAttributeTrait;
@@ -26,7 +27,7 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttribute\ThreeDSJsonRes
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttribute\TokenJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttribute\TypeJsonResponseHandlerAttributeTrait;
 
-class StatusJsonResponseHandler implements StatusJsonResponseHandlerContract
+class StatusJsonResponseHandler implements JsonResponseHandlerContract, StatusJsonResponseHandlerContract
 {
     use ExtraJsonResponseHandlerAttributeTrait,
         MessageJsonResponseHandlerAttributeTrait,
