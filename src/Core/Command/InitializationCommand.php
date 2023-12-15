@@ -3,7 +3,6 @@
 namespace Shahmal1yev\EasyPay\Yigim\Core\Command;
 
 use Shahmal1yev\EasyPay\Yigim\Contracts\Command\InitializationCommandContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\CommandAttributeContract;
 use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttribute\AmountCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttribute\BillerCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttribute\CallbackCommandAttributeTrait;
@@ -18,7 +17,7 @@ use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttribute\TemplateCommandAttributeTr
 use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttribute\TokenCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttribute\TypeCommandAttributeTrait;
 
-class InitializationCommand implements CommandAttributeContract, InitializationCommandContract
+class InitializationCommand implements InitializationCommandContract
 {
     use CommandAttributeTrait,
         ReferenceCommandAttributeTrait,
