@@ -9,5 +9,9 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlerAttribute\UrlJsonResp
 
 interface InitializationJsonResponseHandlerContract extends JsonResponseHandlerAttributeContract, MessageJsonResponseHandlerAttributeContract, CodeJsonResponseHandlerAttributeContract, UrlJsonResponseHandlerAttributeContract
 {
-
+    public const array REQUIRED_FIELDS = [
+        'url',
+        'code',
+        'message'
+    ];
 }

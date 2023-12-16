@@ -11,11 +11,6 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttribute\UrlJsonRespons
 class InitializationJsonResponseHandler implements JsonResponseHandlerContract, InitializationJsonResponseHandlerContract
 {
     private \stdClass $response;
-    private const array REQUIRED_FIELDS = [
-        'url',
-        'code',
-        'message'
-    ];
 
     use MessageJsonResponseHandlerAttributeTrait,
         CodeJsonResponseHandlerAttributeTrait,
