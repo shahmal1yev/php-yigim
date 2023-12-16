@@ -1,6 +1,6 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute;
+namespace Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute;
 
 interface DescriptionCommandAttributeContract
 {

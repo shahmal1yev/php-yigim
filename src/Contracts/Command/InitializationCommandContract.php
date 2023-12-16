@@ -2,19 +2,19 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Contracts\Command;
 
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\AmountCommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\BillerCommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\CallbackCommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\CommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\CurrencyCommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\DescriptionCommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\ExtraCommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\LanguageCommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\ReferenceCommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\SaveCommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\TemplateCommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\TokenCommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttribute\TypeCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\AmountCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\BillerCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\CallbackCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\CommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\CurrencyCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\DescriptionCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\ExtraCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\LanguageCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\ReferenceCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\SaveCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\TemplateCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\TokenCommandAttributeContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\TypeCommandAttributeContract;
 
 interface InitializationCommandContract extends CommandAttributeContract, ExtraCommandAttributeContract, CallbackCommandAttributeContract, LanguageCommandAttributeContract, TemplateCommandAttributeContract, DescriptionCommandAttributeContract, BillerCommandAttributeContract, CurrencyCommandAttributeContract, AmountCommandAttributeContract, SaveCommandAttributeContract, TokenCommandAttributeContract, TypeCommandAttributeContract, ReferenceCommandAttributeContract
 {
