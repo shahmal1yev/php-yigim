@@ -16,6 +16,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php-di/php-di": "dev-master"
+        "php-di/php-di": "dev-master",
+        "ext-curl": "*",
+        "ext-http": "*"
     }
 }
