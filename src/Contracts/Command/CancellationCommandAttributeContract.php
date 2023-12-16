@@ -6,7 +6,7 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\AmountCommandAttribute
 use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\CommandAttributeContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\ReferenceCommandAttributeContract;
 
-interface RefundCommandContract extends CommandAttributeContract, AmountCommandAttributeContract, ReferenceCommandAttributeContract
+interface CancellationCommandAttributeContract extends CommandAttributeContract, ReferenceCommandAttributeContract, AmountCommandAttributeContract
 {
 
 }
