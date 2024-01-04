@@ -20,7 +20,7 @@ class InitializationCommandFactory extends CommandFactoryAbstract
     public static function make(InitializationCommandAttributeContract $attributer = null, ContainerInterface $containerBuilder = null): CommandFactoryAbstract
     {
         $command = new static($containerBuilder);
-        $command->setAttributer($attributer);
+        $command->setAttributer($attributer ?? new InitializationCommandAttribute);
         $command->boot();
 
         return $command;
