@@ -14,7 +14,18 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\ReferenceCommandAttrib
 use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\TokenCommandAttributeContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\Command\Attribute\TypeCommandAttributeContract;
 
-interface DirectPaymentCommandAttributeContract extends CommandAttributeContract, TypeCommandAttributeContract, BillerCommandAttributeContract, AmountCommandAttributeContract, ExpiryCommandAttributeContract, TokenCommandAttributeContract, PanCommandAttributeContract, CscCommandAttributeContract, CurrencyCommandAttributeContract, ExtraCommandAttributeContract, ReferenceCommandAttributeContract
+interface DirectPaymentCommandAttributeContract extends
+    CommandAttributeContract,
+    TypeCommandAttributeContract,
+    BillerCommandAttributeContract,
+    AmountCommandAttributeContract,
+    ExpiryCommandAttributeContract,
+    TokenCommandAttributeContract,
+    PanCommandAttributeContract,
+    CscCommandAttributeContract,
+    CurrencyCommandAttributeContract,
+    ExtraCommandAttributeContract,
+    ReferenceCommandAttributeContract
 {
 
 }
