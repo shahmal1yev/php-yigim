@@ -17,6 +17,7 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\Commands\Attributes\TokenCommandAttribut
 use Shahmal1yev\EasyPay\Yigim\Contracts\Commands\Attributes\TypeCommandAttributeContract;
 
 interface InitializationCommandAttributerContract extends
+    CommandAttributerContract,
     CommandAttributeContract,
     ExtraCommandAttributeContract,
     CallbackCommandAttributeContract,

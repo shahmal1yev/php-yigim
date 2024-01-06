@@ -15,6 +15,7 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\Commands\Attributes\TokenCommandAttribut
 use Shahmal1yev\EasyPay\Yigim\Contracts\Commands\Attributes\TypeCommandAttributeContract;
 
 interface DirectPaymentCommandAttributerContract extends
+    CommandAttributerContract,
     CommandAttributeContract,
     TypeCommandAttributeContract,
     BillerCommandAttributeContract,
