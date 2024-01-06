@@ -8,13 +8,13 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\Command\CommandAttributeContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandler\JsonResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Enums\CommandEndpointEnum;
 
-readonly class CommandExecutor
+class CommandExecutor
 {
-    private string $responseHandler;
+    private readonly string $responseHandler;
 
     public function __construct(
-        private CommandEndpointEnum      $endpoint,
-        private CommandAttributeContract $attributer,
+        private readonly CommandEndpointEnum      $endpoint,
+        private readonly CommandAttributeContract $attributer,
         string                           $responseHandler
     )
     {
