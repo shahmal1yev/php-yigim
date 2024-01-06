@@ -14,6 +14,7 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\ExpiryJsonRes
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\ExtraJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\FeeJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\IssuerJsonResponseHandlerAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\JsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\MessageJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\MethodJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\OffsetJsonResponseHandlerAttributeTrait;
@@ -29,7 +30,8 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\TypeJsonRespo
 
 class StatusJsonResponseHandler implements JsonResponseHandlerContract, StatusJsonResponseHandlerContract
 {
-    use ExtraJsonResponseHandlerAttributeTrait,
+    use JsonResponseHandlerAttributeTrait,
+        ExtraJsonResponseHandlerAttributeTrait,
         MessageJsonResponseHandlerAttributeTrait,
         CodeJsonResponseHandlerAttributeTrait,
         StatusJsonResponseHandlerAttributeTrait,
@@ -51,4 +53,11 @@ class StatusJsonResponseHandler implements JsonResponseHandlerContract, StatusJs
         MethodJsonResponseHandlerAttributeTrait,
         DatetimeJsonResponseHandlerAttributeTrait,
         ReferenceJsonResponseHandlerAttributeTrait;
+
+    private readonly \stdClass $response;
+
+    public function __construct(private readonly string $json)
+    {
+        $this->construct();
+    }
 }

@@ -13,6 +13,7 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\DatetimeJsonR
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\ExpiryJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\FeeJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\IssuerJsonResponseHandlerAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\JsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\MessageJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\MethodJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\PanJsonResponseHandlerAttributeTrait;
@@ -26,7 +27,8 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\TypeJsonRespo
 
 class DirectPaymentJsonResponseHandler implements JsonResponseHandlerContract, DirectPaymentJsonResponseHandlerContract
 {
-    use MessageJsonResponseHandlerAttributeTrait,
+    use JsonResponseHandlerAttributeTrait,
+        MessageJsonResponseHandlerAttributeTrait,
         CodeJsonResponseHandlerAttributeTrait,
         StatusJsonResponseHandlerAttributeTrait,
         ThreeDSJsonResponseHandlerAttributeTrait,
@@ -45,4 +47,11 @@ class DirectPaymentJsonResponseHandler implements JsonResponseHandlerContract, D
         MethodJsonResponseHandlerAttributeTrait,
         DatetimeJsonResponseHandlerAttributeTrait,
         ReferenceJsonResponseHandlerAttributeTrait;
+
+    private readonly \stdClass $response;
+
+    public function __construct(private readonly string $json)
+    {
+        $this->construct();
+    }
 }
