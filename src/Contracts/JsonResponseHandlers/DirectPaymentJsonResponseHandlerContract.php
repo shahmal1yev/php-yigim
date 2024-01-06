@@ -25,5 +25,25 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlerAttributes\TypeJsonRe
 
 interface DirectPaymentJsonResponseHandlerContract extends JsonResponseHandlerAttributeContract, MessageJsonResponseHandlerAttributeContract, CodeJsonResponseHandlerAttributeContract, StatusJsonResponseHandlerAttributeContract, ThreeDSJsonResponseHandlerAttributeContract, ApprovalJsonResponseHandlerAttributeContract, RrnJsonResponseHandlerAttributeContract, SystemJsonResponseHandlerAttributeContract, IssuerJsonResponseHandlerAttributeContract, BillerJsonResponseHandlerAttributeContract, CurrencyJsonResponseHandlerAttributeContract, FeeJsonResponseHandlerAttributeContract, AmountJsonResponseHandlerAttributeContract, ExpiryJsonResponseHandlerAttributeContract, PanJsonResponseHandlerAttributeContract, TokenJsonResponseHandlerAttributeContract, TypeJsonResponseHandlerAttributeContract, MethodJsonResponseHandlerAttributeContract, DatetimeJsonResponseHandlerAttributeContract, ReferenceJsonResponseHandlerAttributeContract
 {
-
+    public const array REQUIRED_FIELDS = [
+        'reference',
+        'datetime',
+        'method',
+        'type',
+        'token',
+        'pan',
+        'expiry',
+        'amount',
+        'fee',
+        'currency',
+        'biller',
+        'system',
+        'issuer',
+        'rrn',
+        'approval',
+        '3ds',
+        'status',
+        'code',
+        'message',
+    ];
 }

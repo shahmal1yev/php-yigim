@@ -8,5 +8,8 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlerAttributes\MessageJso
 
 interface RefundJsonResponseHandlerContract extends JsonResponseHandlerAttributeContract, MessageJsonResponseHandlerAttributeContract, CodeJsonResponseHandlerAttributeContract
 {
-
+    public const array REQUIRED_FIELDS = [
+        'code',
+        'message'
+    ];
 }

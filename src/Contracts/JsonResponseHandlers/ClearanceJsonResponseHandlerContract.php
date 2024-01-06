@@ -8,5 +8,8 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlerAttributes\MessageJso
 
 interface ClearanceJsonResponseHandlerContract extends JsonResponseHandlerAttributeContract, CodeJsonResponseHandlerAttributeContract, MessageJsonResponseHandlerAttributeContract
 {
-
+    public const array REQUIRED_FIELDS = [
+        'code',
+        'message'
+    ];
 }
