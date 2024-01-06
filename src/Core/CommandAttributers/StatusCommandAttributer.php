@@ -7,7 +7,7 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\Commands\Attributers\StatusCommandAttrib
 use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\CommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\ReferenceCommandAttributeTrait;
 
-class StatusCommandAttributer implements CommandAttributerContract, StatusCommandAttributerContract
+class StatusCommandAttributer implements StatusCommandAttributerContract
 {
     use CommandAttributeTrait,
         ReferenceCommandAttributeTrait;

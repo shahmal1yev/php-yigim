@@ -16,7 +16,7 @@ use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\ReferenceCommandAttribute
 use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\TokenCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\TypeCommandAttributeTrait;
 
-class DirectPaymentCommandAttributer implements CommandAttributerContract, DirectPaymentCommandAttributerContract
+class DirectPaymentCommandAttributer implements DirectPaymentCommandAttributerContract
 {
     use CommandAttributeTrait,
         ReferenceCommandAttributeTrait,

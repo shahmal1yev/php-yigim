@@ -8,7 +8,7 @@ use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\AmountCommandAttributeTra
 use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\CommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\ReferenceCommandAttributeTrait;
 
-class RefundCommandAttributer implements CommandAttributerContract, RefundCommandAttributerContract
+class RefundCommandAttributer implements RefundCommandAttributerContract
 {
     use CommandAttributeTrait,
         AmountCommandAttributeTrait,
