@@ -12,19 +12,26 @@ abstract class CommandFactoryAbstract
     protected CommandExecutor $executor;
     protected array $config;
 
-    public function make(AuthCredentialsContract|string $credentials, string $xSignature = null, string $xType = null): CommandExecutor
+    public static final function make(AuthCredentialsContract|string $credentials, string $xSignature = null, string $xType = null): CommandExecutor
     {
-        $this->config = $this->prepareConfig($credentials, $xSignature, $xType);
+        $_this = new static();
 
-        $this->executor = new CommandExecutor(
-            $this->getEndpoint(),
-            $this->getAttributerClass(),
-            $this->getJsonResponseHandlerClass()
+        $_this->config = $_this->prepareConfig($credentials, $xSignature, $xType);
+
+        $_this->executor = new CommandExecutor(
+            $_this->getEndpoint(),
+            $_this->getAttributerClass(),
+            $_this->getJsonResponseHandlerClass()
         );
 
-        $this->boot();
+        $_this->boot();
 
-        return $this->executor;
+        return $_this->executor;
+    }
+
+    protected function __construct()
+    {
+
     }
 
     protected function prepareConfig(AuthCredentialsContract|string $credentials, string $xSignature = null, string $xType = null): array
