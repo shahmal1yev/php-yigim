@@ -4,8 +4,8 @@ namespace Shahmal1yev\EasyPay\Yigim\Executors;
 
 use http\Exception\InvalidArgumentException;
 use http\Exception\RuntimeException;
-use Shahmal1yev\EasyPay\Yigim\Contracts\Command\CommandAttributeContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandler\JsonResponseHandlerContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\Commands\Attributers\CommandAttributerContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlers\JsonResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Enums\CommandEndpointEnum;
 
 class CommandExecutor
@@ -13,9 +13,9 @@ class CommandExecutor
     private readonly string $responseHandler;
 
     public function __construct(
-        private readonly CommandEndpointEnum      $endpoint,
-        private readonly CommandAttributeContract $attributer,
-        string                           $responseHandler
+        private readonly CommandEndpointEnum       $endpoint,
+        private readonly CommandAttributerContract $attributer,
+        string                                     $responseHandler
     )
     {
         if (! in_array(JsonResponseHandlerContract::class, class_implements($responseHandler)))
@@ -43,7 +43,7 @@ class CommandExecutor
         return new $this->responseHandler($response);
     }
 
-    public function setAttribute(): CommandAttributeContract
+    public function setAttribute(): CommandAttributerContract
     {
         return $this->attributer;
     }
