@@ -4,9 +4,9 @@ namespace Shahmal1yev\EasyPay\Yigim\Core\JsonResponseHandlers;
 
 use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlers\InitializationJsonResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlers\JsonResponseHandlerContract;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttribute\CodeJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttribute\MessageJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttribute\UrlJsonResponseHandlerAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\CodeJsonResponseHandlerAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\MessageJsonResponseHandlerAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\UrlJsonResponseHandlerAttributeTrait;
 
 class InitializationJsonResponseHandler implements JsonResponseHandlerContract, InitializationJsonResponseHandlerContract
 {
