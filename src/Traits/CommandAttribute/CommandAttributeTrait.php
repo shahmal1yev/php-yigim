@@ -28,4 +28,9 @@ trait CommandAttributeTrait
     {
         return $this->xType;
     }
+
+    public function getAttributes(): array
+    {
+        return get_object_vars($this);
+    }
 }
