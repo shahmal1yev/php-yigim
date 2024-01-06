@@ -10,11 +10,12 @@ use Shahmal1yev\EasyPay\Yigim\Enums\CommandEndpointEnum;
 
 class CommandExecutor
 {
+    private readonly string $attributer;
     private readonly string $responseHandler;
 
     public function __construct(
         private readonly CommandEndpointEnum       $endpoint,
-        private readonly CommandAttributerContract $attributer,
+        string                                     $attributer,
         string                                     $responseHandler
     )
     {
@@ -22,6 +23,11 @@ class CommandExecutor
             throw new InvalidArgumentException("'$responseHandler': Provided invalid JSON response handler");
 
         $this->responseHandler = $responseHandler;
+
+        if (! in_array(CommandAttributerContract::class, class_implements($attributer)))
+            throw new InvalidArgumentException("'$attributer': Provided invalid command attributer");
+
+        $this->attributer = new $attributer;
     }
 
     public function execute(): JsonResponseHandlerContract
