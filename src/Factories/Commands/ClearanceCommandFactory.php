@@ -6,15 +6,11 @@ use Shahmal1yev\EasyPay\Yigim\Abstracts\Commands\CommandFactoryAbstract;
 use Shahmal1yev\EasyPay\Yigim\Core\CommandAttributers\ClearanceCommandAttributer;
 use Shahmal1yev\EasyPay\Yigim\Core\JsonResponseHandlers\ClearanceJsonResponseHandler;
 use Shahmal1yev\EasyPay\Yigim\Enums\CommandEndpointEnum;
+use Shahmal1yev\EasyPay\Yigim\Traits\Factories\DefaultBoot;
 
 class ClearanceCommandFactory extends CommandFactoryAbstract
 {
-    protected function boot(): void
-    {
-        $this->executor->setAttribute()->setXMerchant($this->config['xMerchant']);
-        $this->executor->setAttribute()->setXSignature($this->config['xSignature']);
-        $this->executor->setAttribute()->setXType($this->config['xType']);
-    }
+    use DefaultBoot;
 
     protected function getEndpoint(): CommandEndpointEnum
     {
