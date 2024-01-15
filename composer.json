@@ -8,6 +8,11 @@
             "Shahmal1yev\\EasyPay\\Yigim\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Shahmal1yev\\EasyPay\\Yigim\\Tests\\": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Eldar Shahmaliyev",

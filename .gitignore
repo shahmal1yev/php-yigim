@@ -1,3 +1,4 @@
-/vendor
-/.idea
+vendor
+.idea
 execute.php
+.phpunit.result.cache
