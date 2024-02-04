@@ -21,6 +21,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "php": "8.2",
         "php-di/php-di": "dev-master",
         "ext-curl": "*",
         "ext-http": "*"
