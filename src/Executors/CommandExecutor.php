@@ -10,7 +10,7 @@ use Shahmal1yev\EasyPay\Yigim\Enums\CommandEndpointEnum;
 
 class CommandExecutor
 {
-    private readonly string $attributer;
+    private readonly CommandAttributerContract $attributer;
     private readonly string $responseHandler;
 
     public function __construct(
@@ -58,6 +58,6 @@ class CommandExecutor
     {
         $attributes = $this->attributer->getAttributes();
 
-        return "{$this->endpoint}?" . http_build_query($attributes);
+        return "{$this->endpoint->value}?" . http_build_query($attributes);
     }
 }
