@@ -7,36 +7,42 @@ use PHPUnit\Framework\TestCase;
 
 class ArrTest extends TestCase
 {
-    public function testGetMethodWithEmptyArray()
+    public function getArrayForTesting(): array
     {
-        $array = [];
-        $this->assertEquals(null, Arr::get($array, 'key'));
-    }
-
-    public function testGetMethodWithNullValue()
-    {
-        $array = ['value' => null];
-        $this->assertEquals(null, Arr::get($array, 'value'));
-    }
-
-    public function testGetMethodWithoutDotNotation()
-    {
-        $array = ['article' => ['content' => 'content']];
-        $this->assertEquals(['content' => 'content'], Arr::get($array, 'article'));
-    }
-
-    public function testGetMethodWithDotNotation()
-    {
-        $array = [
+        return [
             'article' => [
                 'content' => 'content',
                 'meta' => ['keywords' => $keywords = ['keyword 1' => 'keyword 1', 'keyword 2' => 'keyword 2']],
                 'images' => [
                     'cover' => ['1920x1080' => 'cover-1920x1080'],
                     'content' => ['in_order' => ['content-image-1', 'content-image-2']]
-                ]
+                ],
+                'deleted_at' => null
             ],
         ];
+    }
+
+    public function testGetMethodWithEmptyArray()
+    {
+        $this->assertEquals(null, Arr::get([], 'key'));
+    }
+
+    public function testGetMethodWithNullValue()
+    {
+        $array = $this->getArrayForTesting();
+        $this->assertEquals(null, Arr::get($array, 'article.deleted_at'));
+    }
+
+    public function testGetMethodWithoutDotNotation()
+    {
+        $array = $this->getArrayForTesting();
+        $this->assertEquals($array['article'], Arr::get($array, 'article'));
+    }
+
+    public function testGetMethodWithDotNotation()
+    {
+        $array = $this->getArrayForTesting();
+        $keywords = $array['article']['meta']['keywords'];
 
         $this->assertEquals('content', Arr::get($array, 'article.content'));
         $this->assertEquals($keywords, Arr::get($array, 'article.meta.keywords'));
@@ -46,19 +52,19 @@ class ArrTest extends TestCase
 
     public function testGetMethodWithNonexistentKey()
     {
-        $array = ['article' => ['content' => 'content']];
-        $this->assertEquals(null, Arr::get($array, 'not exist key'));
+        $array = $this->getArrayForTesting();
+        $this->assertEquals(null, Arr::get($array, 'nonexistent key'));
     }
 
     public function testGetMethodWithNonexistentKeyUsingDotNotation()
     {
-        $array = ['article' => ['content' => 'content']];
+        $array = $this->getArrayForTesting();
         $this->assertEquals(null, Arr::get($array, 'article.title'));
     }
 
     public function testGetMethodWithValidAndInvalidKey()
     {
-        $array = ['article' => ['meta' => ['description' => 'description']]];
-        $this->assertEquals(null, Arr::get($array, 'article.meta.keywords'));
+        $array = $this->getArrayForTesting();
+        $this->assertEquals(null, Arr::get($array, 'article.content.author'));
     }
 }
