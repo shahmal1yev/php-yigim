@@ -1,0 +1,18 @@
+<?php
+
+namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
+
+trait CallbackCommandAttributeTrait
+{
+    private string $callback;
+
+    public function setCallback(string $callback): void
+    {
+        $this->callback = $callback;
+    }
+
+    public function getCallback(): string
+    {
+        return $this->callback;
+    }
+}

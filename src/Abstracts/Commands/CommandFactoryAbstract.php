@@ -4,7 +4,7 @@ namespace Shahmal1yev\EasyPay\Yigim\Abstracts\Commands;
 
 use InvalidArgumentException;
 use Shahmal1yev\EasyPay\Yigim\Contracts\AuthCredentials\AuthCredentialsContract;
-use Shahmal1yev\EasyPay\Yigim\Enums\CommandEndpointEnum;
+use Shahmal1yev\EasyPay\Yigim\Enums\Endpoint;
 use Shahmal1yev\EasyPay\Yigim\Executors\CommandExecutor;
 
 abstract class CommandFactoryAbstract
@@ -64,7 +64,7 @@ abstract class CommandFactoryAbstract
 
     abstract protected function boot(): void;
 
-    abstract protected function getEndpoint(): CommandEndpointEnum;
+    abstract protected function getEndpoint(): Endpoint;
 
     abstract protected function getAttributerClass(): string;
 

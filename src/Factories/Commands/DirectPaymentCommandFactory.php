@@ -4,7 +4,7 @@ namespace Shahmal1yev\EasyPay\Yigim\Factories\Commands;
 
 use Shahmal1yev\EasyPay\Yigim\Abstracts\Commands\CommandFactoryAbstract;
 use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\DirectPaymentCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Enums\CommandEndpointEnum;
+use Shahmal1yev\EasyPay\Yigim\Enums\Endpoint;
 use Shahmal1yev\EasyPay\Yigim\JsonResponseHandlers\Handlers\DirectPaymentJsonResponseHandler;
 use Shahmal1yev\EasyPay\Yigim\Traits\Factories\DefaultBoot;
 
@@ -12,9 +12,9 @@ class DirectPaymentCommandFactory extends CommandFactoryAbstract
 {
     use DefaultBoot;
 
-    protected function getEndpoint(): CommandEndpointEnum
+    protected function getEndpoint(): Endpoint
     {
-        return CommandEndpointEnum::DIRECT_PAYMENT;
+        return Endpoint::DIRECT_PAYMENT;
     }
 
     protected function getAttributerClass(): string
