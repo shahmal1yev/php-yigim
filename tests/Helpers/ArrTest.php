@@ -67,4 +67,41 @@ class ArrTest extends TestCase
         $array = $this->getArrayForTesting();
         $this->assertEquals(null, Arr::get($array, 'article.content.author'));
     }
+
+    public function testGetMethodWithDefaultForEmptyArray()
+    {
+        $defaultValue = "Default value";
+        $this->assertEquals($defaultValue, Arr::get([], 'nonexistent key', $defaultValue));
+    }
+
+    public function testGetMethodWithDefaultForNullValue()
+    {
+        $defaultValue = "Default value";
+        $array = $this->getArrayForTesting();
+        $this->assertEquals(null, Arr::get($array, 'article.deleted_at', $defaultValue));
+    }
+
+    public function testGetMethodWithDefaultForExistingKey()
+    {
+        $defaultValue = "Default value";
+        $array = $this->getArrayForTesting();
+        $this->assertEquals('content-image-2', Arr::get($array, 'article.images.content.in_order.1', $defaultValue));
+    }
+
+    public function testExistsWithExistingKey()
+    {
+        $this->assertTrue(Arr::exists($this->getArrayForTesting(), 'article'));
+    }
+
+    public function testExistsWithNonexistentKey()
+    {
+        $this->assertFalse(Arr::exists([], 'article'));
+    }
+
+    public function testExistsWithNonArrayInput()
+    {
+        $this->assertFalse(Arr::exists(new \stdClass(), 'article'));
+        $this->assertFalse(Arr::exists("string", 'article'));
+        $this->assertFalse(Arr::exists(1.5, 'article'));
+    }
 }
