@@ -3,9 +3,9 @@
 namespace Shahmal1yev\EasyPay\Yigim\Factories\Commands;
 
 use Shahmal1yev\EasyPay\Yigim\Abstracts\Commands\CommandFactoryAbstract;
-use Shahmal1yev\EasyPay\Yigim\Core\CommandAttributers\RefundCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Core\JsonResponseHandlers\RefundJsonResponseHandler;
+use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\RefundCommandAttributer;
 use Shahmal1yev\EasyPay\Yigim\Enums\CommandEndpointEnum;
+use Shahmal1yev\EasyPay\Yigim\JsonResponseHandlers\Handlers\RefundJsonResponseHandler;
 use Shahmal1yev\EasyPay\Yigim\Traits\Factories\DefaultBoot;
 
 class RefundCommandFactory extends CommandFactoryAbstract

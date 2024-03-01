@@ -3,9 +3,9 @@
 namespace Shahmal1yev\EasyPay\Yigim\Factories\Commands;
 
 use Shahmal1yev\EasyPay\Yigim\Abstracts\Commands\CommandFactoryAbstract;
-use Shahmal1yev\EasyPay\Yigim\Core\CommandAttributers\CancellationCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Core\JsonResponseHandlers\CancellationJsonResponseHandler;
+use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\CancellationCommandAttributer;
 use Shahmal1yev\EasyPay\Yigim\Enums\CommandEndpointEnum;
+use Shahmal1yev\EasyPay\Yigim\JsonResponseHandlers\Handlers\CancellationJsonResponseHandler;
 use Shahmal1yev\EasyPay\Yigim\Traits\Factories\DefaultBoot;
 
 class CancellationCommandFactory extends CommandFactoryAbstract

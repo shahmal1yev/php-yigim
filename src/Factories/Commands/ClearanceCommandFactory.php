@@ -3,9 +3,9 @@
 namespace Shahmal1yev\EasyPay\Yigim\Factories\Commands;
 
 use Shahmal1yev\EasyPay\Yigim\Abstracts\Commands\CommandFactoryAbstract;
-use Shahmal1yev\EasyPay\Yigim\Core\CommandAttributers\ClearanceCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Core\JsonResponseHandlers\ClearanceJsonResponseHandler;
+use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\ClearanceCommandAttributer;
 use Shahmal1yev\EasyPay\Yigim\Enums\CommandEndpointEnum;
+use Shahmal1yev\EasyPay\Yigim\JsonResponseHandlers\Handlers\ClearanceJsonResponseHandler;
 use Shahmal1yev\EasyPay\Yigim\Traits\Factories\DefaultBoot;
 
 class ClearanceCommandFactory extends CommandFactoryAbstract

@@ -2,8 +2,8 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Tests\Core\CommandAttributers;
 
-use Shahmal1yev\EasyPay\Yigim\Core\CommandAttributers\InitializationCommandAttributer;
 use PHPUnit\Framework\TestCase;
+use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\InitializationCommandAttributer;
 
 class InitializationCommandAttributerTest extends TestCase
 {

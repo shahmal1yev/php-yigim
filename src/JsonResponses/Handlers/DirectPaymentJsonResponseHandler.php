@@ -1,9 +1,9 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Core\JsonResponseHandlers;
+namespace Shahmal1yev\EasyPay\Yigim\JsonResponseHandlers\Handlers;
 
+use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlers\DirectPaymentJsonResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlers\JsonResponseHandlerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlers\StatusJsonResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\AmountJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\ApprovalJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\BillerJsonResponseHandlerAttributeTrait;
@@ -11,16 +11,13 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\CodeJsonRespo
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\CurrencyJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\DatetimeJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\ExpiryJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\ExtraJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\FeeJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\IssuerJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\JsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\MessageJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\MethodJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\OffsetJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\PanJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\ReferenceJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\RefundJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\RrnJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\StatusJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\SystemJsonResponseHandlerAttributeTrait;
@@ -28,14 +25,12 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\ThreeDSJsonRe
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\TokenJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\TypeJsonResponseHandlerAttributeTrait;
 
-class StatusJsonResponseHandler implements JsonResponseHandlerContract, StatusJsonResponseHandlerContract
+class DirectPaymentJsonResponseHandler implements JsonResponseHandlerContract, DirectPaymentJsonResponseHandlerContract
 {
     use JsonResponseHandlerAttributeTrait,
-        ExtraJsonResponseHandlerAttributeTrait,
         MessageJsonResponseHandlerAttributeTrait,
         CodeJsonResponseHandlerAttributeTrait,
         StatusJsonResponseHandlerAttributeTrait,
-        RefundJsonResponseHandlerAttributeTrait,
         ThreeDSJsonResponseHandlerAttributeTrait,
         ApprovalJsonResponseHandlerAttributeTrait,
         RrnJsonResponseHandlerAttributeTrait,
@@ -43,7 +38,6 @@ class StatusJsonResponseHandler implements JsonResponseHandlerContract, StatusJs
         IssuerJsonResponseHandlerAttributeTrait,
         BillerJsonResponseHandlerAttributeTrait,
         CurrencyJsonResponseHandlerAttributeTrait,
-        OffsetJsonResponseHandlerAttributeTrait,
         FeeJsonResponseHandlerAttributeTrait,
         AmountJsonResponseHandlerAttributeTrait,
         ExpiryJsonResponseHandlerAttributeTrait,

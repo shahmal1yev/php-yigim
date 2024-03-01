@@ -3,7 +3,7 @@
 namespace Shahmal1yev\EasyPay\Yigim\Tests\Core\CommandAttributers;
 
 use PHPUnit\Framework\TestCase;
-use Shahmal1yev\EasyPay\Yigim\Core\CommandAttributers\CancellationCommandAttributer;
+use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\CancellationCommandAttributer;
 
 class CancellationCommandAttributerTest extends TestCase
 {

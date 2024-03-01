@@ -2,8 +2,8 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Tests\Core\CommandAttributers;
 
-use Shahmal1yev\EasyPay\Yigim\Core\CommandAttributers\StatusCommandAttributer;
 use PHPUnit\Framework\TestCase;
+use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\StatusCommandAttributer;
 
 class StatusCommandAttributerTest extends TestCase
 {

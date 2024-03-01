@@ -1,18 +1,20 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Core\JsonResponseHandlers;
+namespace Shahmal1yev\EasyPay\Yigim\JsonResponseHandlers\Handlers;
 
+use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlers\InitializationJsonResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlers\JsonResponseHandlerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlers\RefundJsonResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\CodeJsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\JsonResponseHandlerAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\MessageJsonResponseHandlerAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\UrlJsonResponseHandlerAttributeTrait;
 
-class RefundJsonResponseHandler implements JsonResponseHandlerContract, RefundJsonResponseHandlerContract
+class InitializationJsonResponseHandler implements JsonResponseHandlerContract, InitializationJsonResponseHandlerContract
 {
     use JsonResponseHandlerAttributeTrait,
         MessageJsonResponseHandlerAttributeTrait,
-        CodeJsonResponseHandlerAttributeTrait;
+        CodeJsonResponseHandlerAttributeTrait,
+        UrlJsonResponseHandlerAttributeTrait;
 
     private readonly \stdClass $response;
 

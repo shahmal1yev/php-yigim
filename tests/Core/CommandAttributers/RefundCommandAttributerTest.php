@@ -2,8 +2,8 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Tests\Core\CommandAttributers;
 
-use Shahmal1yev\EasyPay\Yigim\Core\CommandAttributers\RefundCommandAttributer;
 use PHPUnit\Framework\TestCase;
+use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\RefundCommandAttributer;
 
 class RefundCommandAttributerTest extends TestCase
 {
