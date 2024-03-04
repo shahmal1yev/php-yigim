@@ -8,16 +8,16 @@ class Arr
      * Get a value from an array using "dot" notation
      *
      * @param array $array The array to search
-     * @param string $keys The key to retrieve, with dot notation for nested keys
+     * @param string $key The key to retrieve, with dot notation for nested keys
      * @param mixed $default (optional) The default value to return if the key is not found
      * @return mixed The value if found, otherwise the default value or null
      */
-    public static function get(array $array, string $keys, mixed $default = null): mixed
+    public static function get(array $array, string $key, mixed $default = null): mixed
     {
-        if (isset($array[$keys]))
-            return $array[$keys];
+        if (isset($array[$key]))
+            return $array[$key];
 
-        $segments = explode('.', $keys);
+        $segments = explode('.', $key);
 
         foreach($segments as $segment)
         {
