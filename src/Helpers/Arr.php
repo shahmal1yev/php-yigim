@@ -37,12 +37,12 @@ class Arr
      * @param string $key The key to check for existence
      * @return bool True if the key exists, otherwise false
      */
-    public static function exists(mixed $array, string $keys): bool
+    public static function exists(mixed $array, string $key): bool
     {
         if (! is_array($array))
             return false;
 
-        if (! array_key_exists($keys, $array))
+        if (! array_key_exists($key, $array))
             return false;
 
         return true;
