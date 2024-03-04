@@ -19,6 +19,7 @@ class ArrTest extends TestCase
                 ],
                 'deleted_at' => null
             ],
+            'page' => 1
         ];
     }
 
@@ -103,5 +104,56 @@ class ArrTest extends TestCase
         $this->assertFalse(Arr::exists(new \stdClass(), 'article'));
         $this->assertFalse(Arr::exists("string", 'article'));
         $this->assertFalse(Arr::exists(1.5, 'article'));
+    }
+
+    public function testForgetRemovesSingleKey()
+    {
+        $actual = $excepted = $this->getArrayForTesting();
+
+        Arr::forget($actual, 'page');
+        unset($excepted['page']);
+
+        $this->assertArrayNotHasKey('page', $actual);
+        $this->assertEquals($excepted, $actual);
+    }
+
+    public function testForgetRemovesNestedKey()
+    {
+        $actual = $excepted = $this->getArrayForTesting();
+
+        Arr::forget($actual, 'article.meta.keywords.keyword 1');
+        unset($excepted['article']['meta']['keywords']['keyword 1']);
+
+        $this->assertArrayNotHasKey('keyword 1', $actual['article']['meta']['keywords']);
+        $this->assertEquals($excepted, $actual);
+    }
+
+    public function testForgetDoesNotAffectOtherKeys()
+    {
+        $actual = $this->getArrayForTesting();
+
+        Arr::forget($actual, 'article.images.content.in_order');
+
+        $this->assertArrayNotHasKey('cover', $actual['article']['images']['content']);
+        $this->assertArrayHasKey('page', $actual);
+        $this->assertArrayHasKey('deleted_at', $actual['article']);
+    }
+
+    public function testForgetHandlesNonexistentKey()
+    {
+        $actual = $excepted = $this->getArrayForTesting();
+
+        Arr::forget($actual, 'article.created_at');
+
+        $this->assertEquals($excepted, $actual);
+    }
+
+    public function testForgetHandlesEmptyArray()
+    {
+        $actual = $excepted = [];
+
+        Arr::forget($actual, 'key');
+
+        $this->assertEquals($excepted, $actual);
     }
 }

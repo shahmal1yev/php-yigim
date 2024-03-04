@@ -47,4 +47,31 @@ class Arr
 
         return true;
     }
+
+    /**
+     * Remove a value from an array using "dot" notation.
+     *
+     * This method removes a value from the array using "dot" notation,
+     * which allows you to specify the nested array key using dot syntax.
+     * For example, if you have an array like ['foo' => ['bar' => 'baz']],
+     * you can remove the 'bar' key by calling forget($array, 'foo.bar').
+     *
+     * @param array $array The array to modify
+     * @param string $key The key to remove (supports "dot" notation)
+     * @return void
+     */
+    public static function forget(array &$array, string $key): void
+    {
+        $parts = explode(".", $key);
+
+        while(count($parts) > 1)
+        {
+            $part = array_shift($parts);
+
+            if (isset($array[$part]))
+                $array = &$array[$part];
+        }
+
+        unset($array[array_shift($parts)]);
+    }
 }
