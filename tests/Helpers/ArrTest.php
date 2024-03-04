@@ -156,4 +156,68 @@ class ArrTest extends TestCase
 
         $this->assertEquals($excepted, $actual);
     }
+
+    public function testPullMethodWithSingleKey()
+    {
+        $array = $this->getArrayForTesting();
+
+        $excepted = $array['article'];
+        $actual = Arr::pull($array, 'article');
+
+        $this->assertEquals($excepted, $actual);
+        $this->assertArrayNotHasKey('article', $actual);
+    }
+
+    public function testPullMethodWithDotNotation()
+    {
+        $array = $this->getArrayForTesting();
+
+        $excepted = $array['article']['meta']['keywords']['keyword 1'];
+        $actual = Arr::pull($array, 'article.meta.keywords.keyword 1');
+
+        $this->assertEquals($excepted, $actual);
+        $this->assertArrayNotHasKey('keyword 1', $array['article']['meta']['keywords']);
+    }
+
+    public function testPullMethodWithNonexistentKeyUsingDotNotation()
+    {
+        $array = $this->getArrayForTesting();
+
+        $this->assertArrayNotHasKey('keyword 3', $array['article']['meta']['keywords']);
+
+        $excepted = null;
+        $actual = Arr::pull($array, 'article.meta.keywords.keyword 3');
+
+        $this->assertEquals($excepted, $actual);
+    }
+
+    public function testPullMethodWithExistentKeyAndDefaultValueUsingDotNotation()
+    {
+        $array = $this->getArrayForTesting();
+
+        $this->assertArrayHasKey('deleted_at', $array['article']);
+
+        $defaultValue = 'default value';
+
+        $excepted = $array['article']['deleted_at']; # $excepted = null
+        $actual = Arr::pull($array, 'article.deleted_at', $defaultValue);
+
+        $this->assertNotEquals($defaultValue, $actual);
+        $this->assertEquals($excepted, $actual);
+        $this->assertArrayNotHasKey('deleted_at', $array['article']);
+    }
+
+    public function testPullMethodWithNonexistentKeyAndDefaultValueUsingDotNotation()
+    {
+        $array = $this->getArrayForTesting();
+
+        $this->assertArrayNotHasKey('keyword 3', $array['article']['meta']['keywords']);
+
+        $defaultValue = 'default value';
+
+        $excepted = $defaultValue;
+        $actual = Arr::pull($array, 'article.meta.keywords.keyword 3', $defaultValue);
+
+        $this->assertEquals($excepted, $actual);
+    }
 }

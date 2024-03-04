@@ -74,4 +74,27 @@ class Arr
 
         unset($array[array_shift($parts)]);
     }
+
+    /**
+     * Retrieve a value from an array using "dot" notation and remove it.
+     *
+     * This method retrieves a value from the array using "dot" notation,
+     * which allows you to specify the nested array key using dot syntax.
+     * For example, if you have an array like ['foo' => ['bar' => 'baz']],
+     * you can pull the value of 'bar' by calling pull($array, 'foo.bar').
+     * The specified key is then removed from the array.
+     *
+     * @param array $array The array to search
+     * @param string $key The key to retrieve (supports "dot" notation)
+     * @param mixed $default The default value to return if the key is not found
+     * @return mixed The retrieved value or the default value
+     */
+    public static function pull(array &$array, string $key, mixed $default = null): mixed
+    {
+        $value = self::get($array, $key, $default);
+
+        self::forget($array, $key);
+
+        return $value;
+    }
 }
