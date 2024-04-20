@@ -2,62 +2,67 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Executors;
 
-use http\Exception\InvalidArgumentException;
-use http\Exception\RuntimeException;
-use Shahmal1yev\EasyPay\Yigim\Contracts\Commands\Attributers\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\JsonResponseHandlers\Handlers\JsonResponseHandlerContract;
-use Shahmal1yev\EasyPay\Yigim\Enums\Endpoint;
 
-class CommandExecutor
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandExecutorContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandResponseHandlerContract;
+use Shahmal1yev\EasyPay\Yigim\Exceptions\CommandExecutionFailedException;
+
+class CommandExecutor implements CommandExecutorContract
 {
-    private readonly CommandAttributerContract $attributer;
-    private readonly string $responseHandler;
+    private CommandAttributerContract $attributer;
+    private CommandResponseHandlerContract $responseHandler;
+    private CommandEndpointProviderContract $endpointProvider;
 
-    public function __construct(
-        private readonly Endpoint $endpoint,
-        string                    $attributer,
-        string                    $responseHandler
-    )
+    public function __construct(CommandFactoryContract $factory)
     {
-        if (! in_array(JsonResponseHandlerContract::class, class_implements($responseHandler)))
-            throw new InvalidArgumentException("'$responseHandler': Provided invalid JSON response handler");
-
-        $this->responseHandler = $responseHandler;
-
-        if (! in_array(CommandAttributerContract::class, class_implements($attributer)))
-            throw new InvalidArgumentException("'$attributer': Provided invalid command attributer");
-
-        $this->attributer = new $attributer;
+        $this->attributer = $factory->createAttributer();
+        $this->responseHandler = $factory->createResponseHandler();
+        $this->endpointProvider = $factory->createProvider();
     }
 
-    public function execute(): JsonResponseHandlerContract
+    /**
+     * @throws CommandExecutionFailedException
+     */
+    public function execute(): \Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract
     {
         $ch = curl_init();
 
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 1);
-        curl_setopt($ch, CURLOPT_URL, $this->buildURL());
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+        curl_setopt($ch, CURLOPT_URL, $this->getURL());
+        curl_setopt($ch, CURLOPT_FAILONERROR, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 
         $response = curl_exec($ch);
 
-        if ($response === false)
-            throw new RuntimeException("cURL request failed: " . curl_error($ch));
+        if (curl_errno($ch))
+            throw new CommandExecutionFailedException(
+                "An error occurred while trying to execute the command: ", curl_error($ch),
+                curl_errno($ch)
+            );
 
-        return new $this->responseHandler($response);
+        return $this->responseHandler->handle($response);
     }
 
-    public function setAttribute(): CommandAttributerContract
+    public function setter(): CommandAttributerContract
     {
         return $this->attributer;
     }
 
-    private function buildURL(): string
+    private function getURL(): string
     {
-        $attributes = $this->attributer->getAttributes();
+        $fields = $this->attributer->getAttributes();
 
-        return "{$this->endpoint->value}?" . http_build_query($attributes);
+        $endpoint = $this->endpointProvider->getEndpoint()->value;
+        $query = http_build_query($fields);
+
+        $url = "$endpoint?$query";
+
+        return $url;
     }
 }

@@ -1,14 +1,14 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Attributers;
+namespace Shahmal1yev\EasyPay\Yigim\Attributers;
 
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\AmountCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\BillerCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CallbackCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CurrencyCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\DescriptionCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\ExtraCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\LanguageCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\ReferenceCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\SaveCommandAttributeTrait;
@@ -18,7 +18,8 @@ use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TypeCommandAttributeTra
 
 class InitializationCommandAttributer implements CommandAttributerContract
 {
-    use ReferenceCommandAttributeTrait,
+    use CommandAttributeTrait,
+        ReferenceCommandAttributeTrait,
         TypeCommandAttributeTrait,
         TokenCommandAttributeTrait,
         SaveCommandAttributeTrait,
@@ -28,6 +29,5 @@ class InitializationCommandAttributer implements CommandAttributerContract
         DescriptionCommandAttributeTrait,
         TemplateCommandAttributeTrait,
         LanguageCommandAttributeTrait,
-        CallbackCommandAttributeTrait,
-        ExtraCommandAttributeTrait;
+        CallbackCommandAttributeTrait;
 }

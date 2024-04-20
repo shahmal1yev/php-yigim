@@ -2,7 +2,7 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Commands;
 
-use Shahmal1yev\EasyPay\Attributers\InitializationCommandAttributer;
+use Shahmal1yev\EasyPay\Yigim\Attributers\InitializationCommandAttributer;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;

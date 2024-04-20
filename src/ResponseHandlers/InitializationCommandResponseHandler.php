@@ -4,6 +4,7 @@ namespace Shahmal1yev\EasyPay\Yigim\ResponseHandlers;
 
 use JsonException;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandResponseHandlerContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
 use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHandlerJsonDecodeException;
 use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHasMissingFieldsException;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\Handlers\Attributes\CodeJsonResponseHandlerAttributeTrait;
@@ -33,23 +34,18 @@ class InitializationCommandResponseHandler implements CommandResponseHandlerCont
     ];
 
     /**
-     * @var object The decoded JSON response.
-     */
-    private object $response;
-
-    /**
      * Handle the JSON response after an initialization command.
      *
      * @param string $json The JSON response string.
      * @throws ResponseHandlerJsonDecodeException If JSON decoding fails.
      * @throws ResponseHasMissingFieldsException If the response is missing required fields.
      */
-    public function handle(string $json): void
+    public function handle(string $json): ResponseDataContract
     {
         $response = $this->decode($json);
         $this->check($response);
 
-        $this->response = $response;
+        return new InitializationCommandResponseData($response);
     }
 
     /**
