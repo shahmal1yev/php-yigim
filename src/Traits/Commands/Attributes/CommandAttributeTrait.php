@@ -114,6 +114,6 @@ trait CommandAttributeTrait
      */
     public function getAttributes(): array
     {
-        return get_object_vars($this);
+        return array_filter(get_object_vars($this));
     }
 }
