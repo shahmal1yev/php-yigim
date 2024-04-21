@@ -41,7 +41,7 @@ trait CommandAttributeTrait
      *
      * @var string $xType Possible values: "JSON"
      */
-    private string $xType;
+    private string $xType = "JSON";
 
     /**
      * Set the merchant name.
@@ -91,7 +91,7 @@ trait CommandAttributeTrait
      */
     public function setXType(string $xType): void
     {
-        if (! Arr::exists(self::X_TYPE_SUPPORTED_VALUES, $xType))
+        if (! in_array($xType, self::X_TYPE_SUPPORTED_VALUES))
             throw new XTypeUnsupportedArgumentException("Unsupported 'xType' provided: $xType");
 
         $this->xType = $xType;
