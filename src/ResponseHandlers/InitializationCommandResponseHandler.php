@@ -7,9 +7,7 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\CommandResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
 use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHandlerJsonDecodeException;
 use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHasMissingFieldsException;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\Handlers\Attributes\CodeJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\Handlers\Attributes\MessageJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\Handlers\Attributes\UrlJsonResponseHandlerAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\ResponseData\InitializationCommandResponseData;
 
 /**
  * Class InitializationCommandResponseHandler
@@ -20,10 +18,6 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\Handlers\Attr
  */
 class InitializationCommandResponseHandler implements CommandResponseHandlerContract
 {
-    use MessageJsonResponseHandlerAttributeTrait,
-        CodeJsonResponseHandlerAttributeTrait,
-        UrlJsonResponseHandlerAttributeTrait;
-
     /**
      * Response fields that must be present in the response JSON.
      */
@@ -37,6 +31,7 @@ class InitializationCommandResponseHandler implements CommandResponseHandlerCont
      * Handle the JSON response after an initialization command.
      *
      * @param string $json The JSON response string.
+     * @return ResponseDataContract The response data contract.
      * @throws ResponseHandlerJsonDecodeException If JSON decoding fails.
      * @throws ResponseHasMissingFieldsException If the response is missing required fields.
      */
@@ -58,7 +53,7 @@ class InitializationCommandResponseHandler implements CommandResponseHandlerCont
     {
         $missingFields = [];
         foreach (self::RESPONSE_FIELDS as $field)
-            if (! property_exists($response, $field))
+            if (!property_exists($response, $field))
                 $missingFields[] = $field;
 
         if (!empty($missingFields))
@@ -76,13 +71,16 @@ class InitializationCommandResponseHandler implements CommandResponseHandlerCont
      */
     private function decode(string $json): object
     {
-        try {
+        try
+        {
             $response = json_decode(
                 json: $json,
                 associative: false,
                 flags: JSON_THROW_ON_ERROR
             );
-        } catch (JsonException $e) {
+        }
+        catch (JsonException $e)
+        {
             throw new ResponseHandlerJsonDecodeException(
                 message: $e->getMessage(),
                 code: $e->getCode(),

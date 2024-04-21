@@ -1,6 +1,6 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Handlers\Attributes;
+namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\Handlers\Attributes;
 
 trait CodeJsonResponseHandlerAttributeTrait
 {
