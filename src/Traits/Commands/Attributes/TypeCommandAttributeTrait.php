@@ -38,9 +38,8 @@ trait TypeCommandAttributeTrait
      */
     public function setType(string $type): void
     {
-        if (! Arr::exists(self::TYPE_SUPPORTED_VALUES, $type)) {
+        if (! in_array($type, self::TYPE_SUPPORTED_VALUES))
             throw new TypeUnsupportedArgumentException("Unsupported 'type' provided: $type");
-        }
 
         $this->type = $type;
     }
