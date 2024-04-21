@@ -17,14 +17,13 @@ use PHPUnit\Framework\TestCase;
 class CommandFacadeTest extends TestCase
 {
     /**
-     * Test that preparing for "initialization" command returns CommandAttributerContract.
+     * Test "initializationCommand" method returns CommandExecutorContract
      */
-    public function testInitializationCommandReturnsCommandAttributerContract(): void
+    public function testInitializationCommandReturnsCommandExecutorContract(): void
     {
         $facade = new CommandFacade();
-
         $executor = $facade->initializationCommand();
 
-        $this->assertInstanceOf(CommandAttributerContract::class, $executor->fieldBuilder());
+        $this->assertInstanceOf(CommandExecutorContract::class, $executor);
     }
 }
