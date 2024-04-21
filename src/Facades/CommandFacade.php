@@ -16,11 +16,11 @@ use Shahmal1yev\EasyPay\Yigim\Executors\CommandExecutor;
 class CommandFacade
 {
     /**
-     * Prepares the command executor for initialization.
+     * Prepares the command executor for "initialization" command.
      *
      * @return CommandExecutorContract The command executor.
      */
-    public function prepareForInitialization(): CommandExecutorContract
+    public function initializationCommand(): CommandExecutorContract
     {
         $factory = new InitializationCommandFactory();
         $executor = new CommandExecutor($factory);

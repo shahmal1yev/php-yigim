@@ -3,6 +3,7 @@
 namespace Shahmal1yev\EasyPay\Yigim\Tests\Facades;
 
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandExecutorContract;
 use Shahmal1yev\EasyPay\Yigim\Facades\CommandFacade;
 use PHPUnit\Framework\TestCase;
 
@@ -16,13 +17,13 @@ use PHPUnit\Framework\TestCase;
 class CommandFacadeTest extends TestCase
 {
     /**
-     * Test that preparing for initialization returns CommandAttributerContract.
+     * Test that preparing for "initialization" command returns CommandAttributerContract.
      */
-    public function testPreparingForInitializationReturnsCommandAttributerContract(): void
+    public function testInitializationCommandReturnsCommandAttributerContract(): void
     {
         $facade = new CommandFacade();
 
-        $executor = $facade->prepareForInitialization();
+        $executor = $facade->initializationCommand();
 
         $this->assertInstanceOf(CommandAttributerContract::class, $executor->fieldBuilder());
     }
