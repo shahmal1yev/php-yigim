@@ -2,22 +2,28 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Commands\Attributers;
 
-use Shahmal1yev\EasyPay\Yigim\Contracts\Commands\Attributers\InitializationCommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\AmountCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\BillerCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\CallbackCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\CommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\CurrencyCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\DescriptionCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\ExtraCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\LanguageCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\ReferenceCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\SaveCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\TemplateCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\TokenCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\CommandAttributes\Attributes\TypeCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\AmountCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\BillerCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CallbackCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CurrencyCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\DescriptionCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\LanguageCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\ReferenceCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\SaveCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TemplateCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TokenCommandAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TypeCommandAttributeTrait;
 
-class InitializationCommandAttributer implements InitializationCommandAttributerContract
+/**
+ * Class InitializationCommandAttributer
+ *
+ * Represents an implementation of CommandAttributerContract used for initializing commands.
+ *
+ * @package Shahmal1yev\EasyPay\Yigim\Attributers
+ */
+class InitializationCommandAttributer implements CommandAttributerContract
 {
     use CommandAttributeTrait,
         ReferenceCommandAttributeTrait,
@@ -30,6 +36,5 @@ class InitializationCommandAttributer implements InitializationCommandAttributer
         DescriptionCommandAttributeTrait,
         TemplateCommandAttributeTrait,
         LanguageCommandAttributeTrait,
-        CallbackCommandAttributeTrait,
-        ExtraCommandAttributeTrait;
+        CallbackCommandAttributeTrait;
 }

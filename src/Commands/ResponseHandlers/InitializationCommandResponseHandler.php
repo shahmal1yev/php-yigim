@@ -1,13 +1,13 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\ResponseHandlers;
+namespace Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers;
 
 use JsonException;
+use Shahmal1yev\EasyPay\Yigim\Commands\ResponseData\InitializationCommandResponseData;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
 use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHandlerJsonDecodeException;
 use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHasMissingFieldsException;
-use Shahmal1yev\EasyPay\Yigim\ResponseData\InitializationCommandResponseData;
 
 /**
  * Class InitializationCommandResponseHandler

@@ -2,9 +2,9 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Tests\EndpointProviders;
 
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
-use Shahmal1yev\EasyPay\Yigim\EndpointProviders\InitializationCommandEndpointProvider;
 use PHPUnit\Framework\TestCase;
+use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\InitializationCommandEndpointProvider;
+use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
 use Shahmal1yev\EasyPay\Yigim\Enums\Endpoint;
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\EndpointProviders;
+namespace Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders;
 
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
 use Shahmal1yev\EasyPay\Yigim\Enums\Endpoint;

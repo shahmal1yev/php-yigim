@@ -1,14 +1,14 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands;
+namespace Shahmal1yev\EasyPay\Yigim\Commands\Factories;
 
-use Shahmal1yev\EasyPay\Yigim\Attributers\InitializationCommandAttributer;
+use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\InitializationCommandAttributer;
+use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\InitializationCommandEndpointProvider;
+use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\InitializationCommandResponseHandler;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandResponseHandlerContract;
-use Shahmal1yev\EasyPay\Yigim\EndpointProviders\InitializationCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\ResponseHandlers\InitializationCommandResponseHandler;
 
 /**
  * Class InitializationCommandFactory
