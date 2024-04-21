@@ -2,20 +2,32 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Executors;
 
-
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandExecutorContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandResponseHandlerContract;
+use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
 use Shahmal1yev\EasyPay\Yigim\Exceptions\CommandExecutionFailedException;
 
+/**
+ * Class CommandExecutor
+ *
+ * Represents an implementation of CommandExecutorContract used for executing commands.
+ *
+ * @package Shahmal1yev\EasyPay\Yigim\Executors
+ */
 class CommandExecutor implements CommandExecutorContract
 {
     private CommandAttributerContract $attributer;
     private CommandResponseHandlerContract $responseHandler;
     private CommandEndpointProviderContract $endpointProvider;
 
+    /**
+     * CommandExecutor constructor.
+     *
+     * @param CommandFactoryContract $factory The factory for creating command components.
+     */
     public function __construct(CommandFactoryContract $factory)
     {
         $this->attributer = $factory->createAttributer();
@@ -24,9 +36,12 @@ class CommandExecutor implements CommandExecutorContract
     }
 
     /**
-     * @throws CommandExecutionFailedException
+     * Executes the command.
+     *
+     * @return ResponseDataContract The response data contract.
+     * @throws CommandExecutionFailedException If the command execution fails.
      */
-    public function execute(): \Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract
+    public function execute(): ResponseDataContract
     {
         $ch = curl_init();
 
@@ -49,11 +64,21 @@ class CommandExecutor implements CommandExecutorContract
         return $this->responseHandler->handle($response);
     }
 
-    public function setter(): CommandAttributerContract
+    /**
+     * Retrieves the command attributer for building command fields.
+     *
+     * @return CommandAttributerContract The command attributer.
+     */
+    public function fieldBuilder(): CommandAttributerContract
     {
         return $this->attributer;
     }
 
+    /**
+     * Builds the URL for the command execution.
+     *
+     * @return string The URL for the command execution.
+     */
     private function getURL(): string
     {
         $fields = $this->attributer->getAttributes();
