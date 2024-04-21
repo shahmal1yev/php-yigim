@@ -16,6 +16,13 @@ use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TemplateCommandAttribut
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TokenCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TypeCommandAttributeTrait;
 
+/**
+ * Class InitializationCommandAttributer
+ *
+ * Represents an implementation of CommandAttributerContract used for initializing commands.
+ *
+ * @package Shahmal1yev\EasyPay\Yigim\Attributers
+ */
 class InitializationCommandAttributer implements CommandAttributerContract
 {
     use CommandAttributeTrait,
