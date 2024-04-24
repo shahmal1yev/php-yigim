@@ -42,7 +42,7 @@ trait LanguageCommandAttributeTrait
      */
     public function setLanguage(string $language): void
     {
-        if (! Arr::exists(self::SUPPORTED_LANGUAGES, $language)) {
+        if (! in_array($language, self::SUPPORTED_LANGUAGES)) {
             throw new InvalidLanguageException("Invalid language code: $language");
         }
 
