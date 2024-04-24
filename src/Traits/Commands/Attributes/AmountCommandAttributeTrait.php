@@ -29,8 +29,8 @@ trait AmountCommandAttributeTrait
      */
     public function setAmount(int $amount): void
     {
-        if ($amount < 0)
-            throw new InvalidAmountException("Amount must be a positive integer.");
+        if ($amount <= 0)
+            throw new InvalidAmountException("Amount must be greater than zero: $amount");
 
         $this->amount = $amount;
     }
