@@ -30,6 +30,7 @@ trait CurrencyCommandAttributeTrait
      *
      * @param string $currency The numeric ISO 4217 currency code.
      * @throws InvalidCurrencyException If the provided currency code is not valid.
+     * @see https://www.iso.org/iso-4217-currency-codes.html
      */
     public function setCurrency(string $currency): void
     {
