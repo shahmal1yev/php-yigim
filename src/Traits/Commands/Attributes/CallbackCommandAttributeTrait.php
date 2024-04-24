@@ -2,6 +2,8 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
 
+use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidCallbackURLException;
+
 /**
  * Trait CallbackCommandAttributeTrait
  *
@@ -23,9 +25,15 @@ trait CallbackCommandAttributeTrait
      * Set the callback attribute.
      *
      * @param string $callback The webhook URL.
+     * @throws InvalidCallbackURLException If an invalid URL is provided for the $callback variable.
+     *
+     * @see https://www.php.net/manual/en/filter.constants.php#constant.filter-validate-url How is the validity of the URL being checked?
      */
     public function setCallback(string $callback): void
     {
+        if (! filter_var($callback, FILTER_VALIDATE_URL))
+            throw new InvalidCallbackURLException("Provided invalid URL for 'callback' field: $callback");
+
         $this->callback = $callback;
     }
 
