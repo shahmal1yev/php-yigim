@@ -1,15 +1,15 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Handlers\Attributes;
+namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes;
 
 /**
- * Trait MessageJsonResponseHandlerAttributeTrait
+ * Trait MessageJsonResponseAttributeTrait
  *
  * Trait for extracting message attribute from JSON responses.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Handlers\Attributes
+ * @package Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Handlers\Attributes
  */
-trait MessageJsonResponseHandlerAttributeTrait
+trait MessageJsonResponseAttributeTrait
 {
     /**
      * Get the message from the JSON response.

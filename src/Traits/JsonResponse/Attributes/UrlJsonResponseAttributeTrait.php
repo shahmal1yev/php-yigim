@@ -1,15 +1,15 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Handlers\Attributes;
+namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes;
 
 /**
- * Trait UrlJsonResponseHandlerAttributeTrait
+ * Trait UrlJsonResponseAttributeTrait
  *
  * Trait for extracting URL attribute from JSON responses.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Handlers\Attributes
+ * @package Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Handlers\Attributes
  */
-trait UrlJsonResponseHandlerAttributeTrait
+trait UrlJsonResponseAttributeTrait
 {
     /**
      * Get the URL from the JSON response.

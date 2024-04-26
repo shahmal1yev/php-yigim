@@ -1,6 +1,6 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponseHandlerAttributes\Handlers\Attributes;
+namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes;
 
 trait CurrencyJsonResponseHandlerAttributeTrait
 {

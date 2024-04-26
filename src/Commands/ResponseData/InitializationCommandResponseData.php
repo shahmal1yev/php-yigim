@@ -3,9 +3,9 @@
 namespace Shahmal1yev\EasyPay\Yigim\Commands\ResponseData;
 
 use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Handlers\Attributes\CodeJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Handlers\Attributes\MessageJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Handlers\Attributes\UrlJsonResponseHandlerAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\CodeJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\MessageJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\UrlJsonResponseAttributeTrait;
 
 /**
  * Class InitializationCommandResponseData
@@ -16,9 +16,9 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Handlers\Attributes\UrlJsonRe
  */
 readonly class InitializationCommandResponseData implements ResponseDataContract
 {
-    use UrlJsonResponseHandlerAttributeTrait,
-        CodeJsonResponseHandlerAttributeTrait,
-        MessageJsonResponseHandlerAttributeTrait;
+    use UrlJsonResponseAttributeTrait,
+        CodeJsonResponseAttributeTrait,
+        MessageJsonResponseAttributeTrait;
 
     /**
      * InitializationCommandResponseData constructor.
