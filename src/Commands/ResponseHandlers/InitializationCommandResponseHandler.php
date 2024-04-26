@@ -52,13 +52,14 @@ class InitializationCommandResponseHandler implements CommandResponseHandlerCont
     public function check(object $response): void
     {
         $missingFields = [];
-        foreach (self::RESPONSE_FIELDS as $field)
-            if (!property_exists($response, $field))
+
+        foreach (self::getResponseFields() as $field)
+            if (! property_exists($response, $field))
                 $missingFields[] = $field;
 
-        if (!empty($missingFields))
+        if (! empty($missingFields))
             throw new ResponseHasMissingFieldsException(
-                self::class . ": The response is missing the following fields: ", implode(', ', $missingFields)
+                self::class . ": The response is missing the following fields: " . implode(', ', $missingFields)
             );
     }
 
@@ -89,5 +90,15 @@ class InitializationCommandResponseHandler implements CommandResponseHandlerCont
         }
 
         return $response;
+    }
+
+    /**
+     * Get required response fields.
+     *
+     * @return array|string[]
+     */
+    public static function getResponseFields(): array
+    {
+        return self::RESPONSE_FIELDS;
     }
 }
