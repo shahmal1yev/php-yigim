@@ -51,11 +51,10 @@ class InitializationCommandResponseHandler implements CommandResponseHandlerCont
      */
     public function check(object $response): void
     {
-        $missingFields = [];
-
-        foreach (self::getResponseFields() as $field)
-            if (! property_exists($response, $field))
-                $missingFields[] = $field;
+        $missingFields = array_diff(
+            self::getResponseFields(),
+            array_keys((array) $response)
+        );
 
         if (! empty($missingFields))
             throw new ResponseHasMissingFieldsException(
