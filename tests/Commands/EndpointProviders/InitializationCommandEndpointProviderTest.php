@@ -1,6 +1,6 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\EndpointProviders;
+namespace Shahmal1yev\EasyPay\Yigim\Tests\Commands\EndpointProviders;
 
 use PHPUnit\Framework\TestCase;
 use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\InitializationCommandEndpointProvider;
