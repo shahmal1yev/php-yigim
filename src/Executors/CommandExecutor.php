@@ -57,7 +57,7 @@ class CommandExecutor implements CommandExecutorContract
 
         if (curl_errno($ch))
             throw new CommandExecutionFailedException(
-                "An error occurred while trying to execute the command: ", curl_error($ch),
+                "An error occurred while trying to execute the command: " . curl_error($ch),
                 curl_errno($ch)
             );
 
