@@ -17,10 +17,10 @@ class InitializationCommandEndpointProvider implements CommandEndpointProviderCo
     /**
      * Get the endpoint URL for the initialization command.
      *
-     * @return Endpoint The endpoint URL for the initialization command.
+     * @return string The endpoint URL for the initialization command.
      */
-    public function getEndpoint(): Endpoint
+    public function getEndpoint(): string
     {
-        return Endpoint::INITIALIZATION;
+        return Endpoint::INITIALIZATION->value;
     }
 }

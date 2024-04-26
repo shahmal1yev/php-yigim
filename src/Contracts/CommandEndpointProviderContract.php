@@ -16,7 +16,7 @@ interface CommandEndpointProviderContract
     /**
      * Get the endpoint URL for the command.
      *
-     * @return Endpoint The endpoint URL for the command.
+     * @return string The endpoint URL for the command.
      */
-    public function getEndpoint(): Endpoint;
+    public function getEndpoint(): string;
 }

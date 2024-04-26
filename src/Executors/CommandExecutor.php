@@ -83,7 +83,7 @@ class CommandExecutor implements CommandExecutorContract
     {
         $fields = $this->attributer->getAttributes();
 
-        $endpoint = $this->endpointProvider->getEndpoint()->value;
+        $endpoint = $this->endpointProvider->getEndpoint();
         $query = http_build_query($fields);
 
         $url = "$endpoint?$query";

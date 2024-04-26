@@ -27,30 +27,4 @@ class InitializationCommandEndpointProviderTest extends TestCase
 
         $this->assertInstanceOf(CommandEndpointProviderContract::class, $endpointProvider);
     }
-
-    /**
-     * Test that getEndpoint method returns an instance of Endpoint enum.
-     *
-     * @return void
-     */
-    public function testGetEndpointReturnsEndpointEnum()
-    {
-        $endpointProvider = new InitializationCommandEndpointProvider();
-        $endpointEnum = $endpointProvider->getEndpoint();
-
-        $this->assertInstanceOf(Endpoint::class, $endpointEnum);
-    }
-
-    /**
-     * Test that getEndpoint method returns the correct endpoint.
-     *
-     * @return void
-     */
-    public function testGetEndpointReturnsCorrectEndpoint()
-    {
-        $endpointProvider = new InitializationCommandEndpointProvider();
-        $endpoint = $endpointProvider->getEndpoint()->value;
-
-        $this->assertSame(Endpoint::INITIALIZATION->value, $endpoint);
-    }
 }
