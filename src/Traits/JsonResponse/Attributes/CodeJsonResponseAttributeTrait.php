@@ -14,9 +14,9 @@ trait CodeJsonResponseAttributeTrait
     /**
      * Get the code from the JSON response.
      *
-     * @return string The code.
+     * @return int The code.
      */
-    public function getCode(): string
+    public function getCode(): int
     {
         return $this->response->code;
     }
