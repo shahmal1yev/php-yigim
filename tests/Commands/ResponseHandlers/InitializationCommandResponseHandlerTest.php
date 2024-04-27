@@ -2,9 +2,10 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Tests\Commands\ResponseHandlers;
 
+use ReflectionException;
 use Shahmal1yev\EasyPay\Yigim\Commands\ResponseData\InitializationCommandResponseData;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\InitializationCommandResponseHandler;
 use PHPUnit\Framework\TestCase;
+use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\InitializationCommandResponseHandler;
 use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
 use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHandlerJsonDecodeException;
 use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHasMissingFieldsException;
@@ -28,12 +29,18 @@ class InitializationCommandResponseHandlerTest extends TestCase
      * Setup method to prepare the test case.
      *
      * @return void
+     * @throws ReflectionException
      */
     protected function setUp(): void
     {
         $response = new \stdClass();
 
-        foreach (InitializationCommandResponseHandler::getResponseFields() as $fieldName)
+        $reflection = new \ReflectionClass(InitializationCommandResponseHandler::class);
+        $method = $reflection->getMethod('getResponseFields');
+
+        $requiredFields = $method->invoke(new InitializationCommandResponseHandler);
+
+        foreach ($requiredFields as $fieldName)
             $response->{$fieldName} = null;
 
         $this->stringResponse = json_encode($response);
@@ -81,12 +88,16 @@ class InitializationCommandResponseHandlerTest extends TestCase
      * @return void
      *
      * @throws ResponseHandlerJsonDecodeException
+     * @throws ReflectionException
      */
     public function testHandleWithMissingFieldsException(): void
     {
         $handler = new InitializationCommandResponseHandler();
 
-        $fieldNames = InitializationCommandResponseHandler::getResponseFields();
+        $reflection = new \ReflectionClass(InitializationCommandResponseHandler::class);
+        $method = $reflection->getMethod('getResponseFields');
+
+        $fieldNames = $method->invoke($handler);
         $randomFieldIndex = array_rand($fieldNames, 1);
         $randomFieldName = $fieldNames[$randomFieldIndex];
 

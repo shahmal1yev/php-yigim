@@ -2,11 +2,11 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Executors;
 
+use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandExecutorContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
 use Shahmal1yev\EasyPay\Yigim\Exceptions\CommandExecutionFailedException;
 
@@ -20,7 +20,7 @@ use Shahmal1yev\EasyPay\Yigim\Exceptions\CommandExecutionFailedException;
 class CommandExecutor implements CommandExecutorContract
 {
     private CommandAttributerContract $attributer;
-    private CommandResponseHandlerContract $responseHandler;
+    private ResponseHandlerAbstract $responseHandler;
     private CommandEndpointProviderContract $endpointProvider;
 
     /**

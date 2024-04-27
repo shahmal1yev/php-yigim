@@ -2,6 +2,7 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories;
 
+use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
 use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\InitializationCommandAttributer;
 use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\InitializationCommandEndpointProvider;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\InitializationCommandFactory;
@@ -9,7 +10,6 @@ use PHPUnit\Framework\TestCase;
 use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\InitializationCommandResponseHandler;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandResponseHandlerContract;
 
 /**
  * Class InitializationCommandFactoryTest
@@ -42,7 +42,7 @@ class InitializationCommandFactoryTest extends TestCase
     {
         $actual = (new InitializationCommandFactory())->createResponseHandler();
 
-        $this->assertInstanceOf(CommandResponseHandlerContract::class, $actual);
+        $this->assertInstanceOf(ResponseHandlerAbstract::class, $actual);
         $this->assertInstanceOf(InitializationCommandResponseHandler::class, $actual);
     }
 

@@ -5,10 +5,10 @@ namespace Shahmal1yev\EasyPay\Yigim\Tests\Executors;
 use PHPUnit\Framework\MockObject\Exception;
 use ReflectionClass;
 use ReflectionException;
+use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
 use Shahmal1yev\EasyPay\Yigim\Exceptions\CommandExecutionFailedException;
 use Shahmal1yev\EasyPay\Yigim\Executors\CommandExecutor;
@@ -34,9 +34,9 @@ class CommandExecutorTest extends TestCase
     private CommandAttributerContract $attributer;
 
     /**
-     * @var CommandResponseHandlerContract
+     * @var ResponseHandlerAbstract
      */
-    private CommandResponseHandlerContract $responseHandler;
+    private ResponseHandlerAbstract $responseHandler;
 
     /**
      * @var CommandEndpointProviderContract
@@ -59,7 +59,7 @@ class CommandExecutorTest extends TestCase
     {
         $this->factory = $this->createMock(CommandFactoryContract::class);
         $this->attributer = $this->createMock(CommandAttributerContract::class);
-        $this->responseHandler = $this->createMock(CommandResponseHandlerContract::class);
+        $this->responseHandler = $this->createMock(ResponseHandlerAbstract::class);
         $this->endpointProvider = $this->createMock(CommandEndpointProviderContract::class);
         $this->responseData = $this->createMock(ResponseDataContract::class);
 

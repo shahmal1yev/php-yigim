@@ -2,13 +2,13 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Commands\Factories;
 
+use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
 use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\InitializationCommandAttributer;
 use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\InitializationCommandEndpointProvider;
 use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\InitializationCommandResponseHandler;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandResponseHandlerContract;
 
 /**
  * Class InitializationCommandFactory
@@ -33,9 +33,9 @@ class InitializationCommandFactory implements CommandFactoryContract
     /**
      * Create an instance of the command response handler.
      *
-     * @return CommandResponseHandlerContract An instance of the command response handler.
+     * @return ResponseHandlerAbstract An instance of the command response handler.
      */
-    public function createResponseHandler(): CommandResponseHandlerContract
+    public function createResponseHandler(): ResponseHandlerAbstract
     {
         return new InitializationCommandResponseHandler();
     }

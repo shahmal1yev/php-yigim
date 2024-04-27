@@ -2,12 +2,9 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers;
 
-use JsonException;
+use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
 use Shahmal1yev\EasyPay\Yigim\Commands\ResponseData\InitializationCommandResponseData;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandResponseHandlerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHandlerJsonDecodeException;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHasMissingFieldsException;
 
 /**
  * Class InitializationCommandResponseHandler
@@ -16,88 +13,29 @@ use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHasMissingFieldsException;
  *
  * @package Shahmal1yev\EasyPay\Yigim\ResponseHandlers
  */
-class InitializationCommandResponseHandler implements CommandResponseHandlerContract
+class InitializationCommandResponseHandler extends ResponseHandlerAbstract
 {
-    /**
-     * Response fields that must be present in the response JSON.
-     */
-    private const array RESPONSE_FIELDS = [
-        'url',
-        'code',
-        'message'
-    ];
-
-    /**
-     * Handle the JSON response after an initialization command.
-     *
-     * @param string $json The JSON response string.
-     * @return ResponseDataContract The response data contract.
-     * @throws ResponseHandlerJsonDecodeException If JSON decoding fails.
-     * @throws ResponseHasMissingFieldsException If the response is missing required fields.
-     */
-    public function handle(string $json): ResponseDataContract
-    {
-        $response = $this->decode($json);
-        $this->check($response);
-
-        return new InitializationCommandResponseData($response);
-    }
-
-    /**
-     * Check if all required fields are present in the response.
-     *
-     * @param object $response The decoded JSON response.
-     * @throws ResponseHasMissingFieldsException If the response is missing required fields.
-     */
-    public function check(object $response): void
-    {
-        $missingFields = array_diff(
-            self::getResponseFields(),
-            array_keys((array) $response)
-        );
-
-        if (! empty($missingFields))
-            throw new ResponseHasMissingFieldsException(
-                self::class . ": The response is missing the following fields: " . implode(', ', $missingFields)
-            );
-    }
-
-    /**
-     * Decode the JSON response string into an object.
-     *
-     * @param string $json The JSON response string.
-     * @return object The decoded JSON response as an object.
-     * @throws ResponseHandlerJsonDecodeException If JSON decoding fails.
-     */
-    private function decode(string $json): object
-    {
-        try
-        {
-            $response = json_decode(
-                json: $json,
-                associative: false,
-                flags: JSON_THROW_ON_ERROR
-            );
-        }
-        catch (JsonException $e)
-        {
-            throw new ResponseHandlerJsonDecodeException(
-                message: $e->getMessage(),
-                code: $e->getCode(),
-                previous: $e
-            );
-        }
-
-        return $response;
-    }
-
     /**
      * Get required response fields.
      *
      * @return array|string[]
      */
-    public static function getResponseFields(): array
+    protected function getResponseFields(): array
     {
-        return self::RESPONSE_FIELDS;
+        return [
+            'url',
+            'code',
+            'message'
+        ];
+    }
+
+    /**
+     * Get the response data class.
+     *
+     * @return ResponseDataContract The response data contract.
+     */
+    protected function getResponseDataClass(): ResponseDataContract
+    {
+        return new InitializationCommandResponseData;
     }
 }
