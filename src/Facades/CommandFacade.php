@@ -2,6 +2,7 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Facades;
 
+use Shahmal1yev\EasyPay\Yigim\Commands\Factories\DirectPaymentCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\InitializationCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\StatusCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandExecutorContract;
@@ -37,6 +38,19 @@ class CommandFacade
     public function statusCommand(): CommandExecutorContract
     {
         $factory = new StatusCommandFactory();
+        $executor = new CommandExecutor($factory);
+
+        return $executor;
+    }
+
+    /**
+     * Prepares the command executor for the "direct payment" command.
+     *
+     * @return CommandExecutorContract The command executor.
+     */
+    public function directPayment(): CommandExecutorContract
+    {
+        $factory = new DirectPaymentCommandFactory();
         $executor = new CommandExecutor($factory);
 
         return $executor;
