@@ -2,6 +2,7 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Facades;
 
+use Shahmal1yev\EasyPay\Yigim\Commands\Factories\BatchCloseCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\CancellationCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\DirectPaymentCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\InitializationCommandFactory;
@@ -93,6 +94,19 @@ class CommandFacade
     public function refund(): CommandExecutorContract
     {
         $factory = new RefundCommandFactory();
+        $executor = new CommandExecutor($factory);
+
+        return $executor;
+    }
+
+    /**
+     * Prepares the command executor for the "closing of batch" command.
+     *
+     * @return CommandExecutorContract The command executor.
+     */
+    public function batchClose(): CommandExecutorContract
+    {
+        $factory = new BatchCloseCommandFactory();
         $executor = new CommandExecutor($factory);
 
         return $executor;

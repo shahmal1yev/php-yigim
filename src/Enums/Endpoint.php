@@ -38,4 +38,9 @@ enum Endpoint: string
      * The endpoint for refunding a payment.
      */
     case REFUND = "https://sandbox.api.pay.yigim.az/payment/refund";
+
+    /**
+     * The endpoint for batch closure.
+     */
+    case BATCH_CLOSE = "https://sandbox.api.pay.yigim.az/merchant/batch/close";
 }

@@ -81,4 +81,15 @@ class CommandFacadeTest extends TestCase
 
         $this->assertInstanceOf(CommandExecutorContract::class, $executor);
     }
+
+    /**
+     * Test "closing of batch" method returns CommandExecutorContract
+     */
+    public function testBatchCloseReturnsCommandExecutorContract(): void
+    {
+        $facade = new CommandFacade();
+        $executor = $facade->batchClose();
+
+        $this->assertInstanceOf(CommandExecutorContract::class, $executor);
+    }
 }
