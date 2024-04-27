@@ -2,6 +2,7 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Facades;
 
+use Shahmal1yev\EasyPay\Yigim\Commands\Factories\CancellationCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\DirectPaymentCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\InitializationCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\PaymentClearanceCommandFactory;
@@ -65,6 +66,19 @@ class CommandFacade
     public function paymentClearance(): CommandExecutorContract
     {
         $factory = new PaymentClearanceCommandFactory();
+        $executor = new CommandExecutor($factory);
+
+        return $executor;
+    }
+
+    /**
+     * Prepares the command executor for the "cancellation" command.
+     *
+     * @return CommandExecutorContract The command executor.
+     */
+    public function cancellation(): CommandExecutorContract
+    {
+        $factory = new CancellationCommandFactory();
         $executor = new CommandExecutor($factory);
 
         return $executor;
