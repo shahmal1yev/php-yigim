@@ -70,4 +70,15 @@ class CommandFacadeTest extends TestCase
 
         $this->assertInstanceOf(CommandExecutorContract::class, $executor);
     }
+
+    /**
+     * Test "refund" method returns CommandExecutorContract
+     */
+    public function testRefundReturnsCommandExecutorContract(): void
+    {
+        $facade = new CommandFacade();
+        $executor = $facade->refund();
+
+        $this->assertInstanceOf(CommandExecutorContract::class, $executor);
+    }
 }
