@@ -6,22 +6,22 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\CodeJsonResponseAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\MessageJsonResponseAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\ResponseDataTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\AmountJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\ApprovalJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\BillerJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\CurrencyJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\DatetimeJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\ExpiryJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\ExtraJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\IssuerJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\PanJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\ReferenceJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\RrnJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\StatusJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\SystemJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\ThreeDSJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\TokenJsonResponseHandlerAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\TypeJsonResponseHandlerAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\AmountJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\ApprovalJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\BillerJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\CurrencyJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\DatetimeJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\ExpiryJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\ExtraJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\IssuerJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\PanJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\ReferenceJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\RrnJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\StatusJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\SystemJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\ThreeDSJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\TokenJsonResponseAttributeTrait;
+use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\TypeJsonResponseAttributeTrait;
 
 /**
  * Class StatusCommandResponseData
@@ -33,22 +33,22 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponses\Attributes\TypeJsonResponseHa
 readonly class StatusCommandResponseData implements ResponseDataContract
 {
     use ResponseDataTrait,
-        ReferenceJsonResponseHandlerAttributeTrait,
-        DatetimeJsonResponseHandlerAttributeTrait,
-        TypeJsonResponseHandlerAttributeTrait,
-        TokenJsonResponseHandlerAttributeTrait,
-        PanJsonResponseHandlerAttributeTrait,
-        ExpiryJsonResponseHandlerAttributeTrait,
-        AmountJsonResponseHandlerAttributeTrait,
-        CurrencyJsonResponseHandlerAttributeTrait,
-        BillerJsonResponseHandlerAttributeTrait,
-        SystemJsonResponseHandlerAttributeTrait,
-        IssuerJsonResponseHandlerAttributeTrait,
-        RrnJsonResponseHandlerAttributeTrait,
-        ApprovalJsonResponseHandlerAttributeTrait,
-        ThreeDSJsonResponseHandlerAttributeTrait,
-        StatusJsonResponseHandlerAttributeTrait,
+        ReferenceJsonResponseAttributeTrait,
+        DatetimeJsonResponseAttributeTrait,
+        TypeJsonResponseAttributeTrait,
+        TokenJsonResponseAttributeTrait,
+        PanJsonResponseAttributeTrait,
+        ExpiryJsonResponseAttributeTrait,
+        AmountJsonResponseAttributeTrait,
+        CurrencyJsonResponseAttributeTrait,
+        BillerJsonResponseAttributeTrait,
+        SystemJsonResponseAttributeTrait,
+        IssuerJsonResponseAttributeTrait,
+        RrnJsonResponseAttributeTrait,
+        ApprovalJsonResponseAttributeTrait,
+        ThreeDSJsonResponseAttributeTrait,
+        StatusJsonResponseAttributeTrait,
         CodeJsonResponseAttributeTrait,
         MessageJsonResponseAttributeTrait,
-        ExtraJsonResponseHandlerAttributeTrait;
+        ExtraJsonResponseAttributeTrait;
 }
