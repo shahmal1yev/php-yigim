@@ -16,8 +16,6 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\ResponseDataTrait;
  */
 class DirectPaymentCommandResponseHandler extends ResponseHandlerAbstract
 {
-    use ResponseDataTrait;
-
     /**
      * Get required response fields.
      *
