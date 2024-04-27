@@ -24,7 +24,7 @@ class CommandFacade
      *
      * @return CommandExecutorContract The command executor.
      */
-    public function initializationCommand(): CommandExecutorContract
+    public function initialization(): CommandExecutorContract
     {
         $factory = new InitializationCommandFactory();
         $executor = new CommandExecutor($factory);
@@ -37,7 +37,7 @@ class CommandFacade
      *
      * @return CommandExecutorContract The command executor.
      */
-    public function statusCommand(): CommandExecutorContract
+    public function status(): CommandExecutorContract
     {
         $factory = new StatusCommandFactory();
         $executor = new CommandExecutor($factory);

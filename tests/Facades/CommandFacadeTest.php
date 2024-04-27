@@ -17,23 +17,56 @@ use PHPUnit\Framework\TestCase;
 class CommandFacadeTest extends TestCase
 {
     /**
-     * Test "initializationCommand" method returns CommandExecutorContract
+     * Test "initialization" method returns CommandExecutorContract
      */
-    public function testInitializationCommandReturnsCommandExecutorContract(): void
+    public function testInitializationReturnsCommandExecutorContract(): void
     {
         $facade = new CommandFacade();
-        $executor = $facade->initializationCommand();
+        $executor = $facade->initialization();
 
         $this->assertInstanceOf(CommandExecutorContract::class, $executor);
     }
 
     /**
-     * Test "initializationCommand" method returns CommandExecutorContract
+     * Test "status" method returns CommandExecutorContract
      */
-    public function testStatusCommandReturnsCommandExecutorContract(): void
+    public function testStatusReturnsCommandExecutorContract(): void
     {
         $facade = new CommandFacade();
-        $executor = $facade->statusCommand();
+        $executor = $facade->status();
+
+        $this->assertInstanceOf(CommandExecutorContract::class, $executor);
+    }
+
+    /**
+     * Test "directPayment" method returns CommandExecutorContract
+     */
+    public function testDirectPaymentReturnsCommandExecutorContract(): void
+    {
+        $facade = new CommandFacade();
+        $executor = $facade->directPayment();
+
+        $this->assertInstanceOf(CommandExecutorContract::class, $executor);
+    }
+
+    /**
+     * Test "paymentClearance" method returns CommandExecutorContract
+     */
+    public function testPaymentClearanceReturnsCommandExecutorContract(): void
+    {
+        $facade = new CommandFacade();
+        $executor = $facade->paymentClearance();
+
+        $this->assertInstanceOf(CommandExecutorContract::class, $executor);
+    }
+
+    /**
+     * Test "cancellation" method returns CommandExecutorContract
+     */
+    public function testCancellationReturnsCommandExecutorContract(): void
+    {
+        $facade = new CommandFacade();
+        $executor = $facade->cancellation();
 
         $this->assertInstanceOf(CommandExecutorContract::class, $executor);
     }
