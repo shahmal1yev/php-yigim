@@ -14,6 +14,13 @@ use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\ReferenceCommandAttribu
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TokenCommandAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TypeCommandAttributeTrait;
 
+/**
+ * Class DirectPaymentCommandAttributer
+ *
+ * Represents an implementation of CommandAttributerContract used for "direct payment" commands.
+ *
+ * @package Shahmal1yev\EasyPay\Yigim\Attributers
+ */
 class DirectPaymentCommandAttributer implements CommandAttributerContract
 {
     use CommandAttributeTrait,

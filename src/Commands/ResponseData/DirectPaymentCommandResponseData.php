@@ -20,7 +20,14 @@ use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\ThreeDSJsonResponse
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\TypeJsonResponseAttributeTrait;
 use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\ResponseDataTrait;
 
-class DirectPaymentCommandResponseData implements ResponseDataContract
+/**
+ * Class DirectPaymentCommandResponseData
+ *
+ * Response data for the "direct payment" command.
+ *
+ * @package Shahmal1yev\EasyPay\Yigim\Commands\ResponseData
+ */
+readonly class DirectPaymentCommandResponseData implements ResponseDataContract
 {
     use ResponseDataTrait,
         ReferenceJsonResponseAttributeTrait,
