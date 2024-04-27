@@ -6,6 +6,7 @@ use Shahmal1yev\EasyPay\Yigim\Commands\Factories\CancellationCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\DirectPaymentCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\InitializationCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\PaymentClearanceCommandFactory;
+use Shahmal1yev\EasyPay\Yigim\Commands\Factories\RefundCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Commands\Factories\StatusCommandFactory;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandExecutorContract;
 use Shahmal1yev\EasyPay\Yigim\Executors\CommandExecutor;
@@ -79,6 +80,19 @@ class CommandFacade
     public function cancellation(): CommandExecutorContract
     {
         $factory = new CancellationCommandFactory();
+        $executor = new CommandExecutor($factory);
+
+        return $executor;
+    }
+
+    /**
+     * Prepares the command executor for the "payment refund" command.
+     *
+     * @return CommandExecutorContract The command executor.
+     */
+    public function refund(): CommandExecutorContract
+    {
+        $factory = new RefundCommandFactory();
         $executor = new CommandExecutor($factory);
 
         return $executor;
