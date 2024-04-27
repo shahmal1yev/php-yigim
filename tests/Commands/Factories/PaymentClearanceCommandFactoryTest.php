@@ -2,23 +2,23 @@
 
 namespace Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories;
 
-use PHPUnit\Framework\TestCase;
 use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\DirectPaymentCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\DirectPaymentCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\DirectPaymentCommandFactory;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\DirectPaymentCommandResponseHandler;
+use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\PaymentClearanceCommandAttributer;
+use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\PaymentClearanceCommandEndpointProvider;
+use Shahmal1yev\EasyPay\Yigim\Commands\Factories\PaymentClearanceCommandFactory;
+use PHPUnit\Framework\TestCase;
+use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\PaymentClearanceCommandResponseHandler;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
 use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
 
 /**
- * Class DirectPaymentCommandFactoryTest
+ * Class PaymentClearanceCommandFactoryTest
  *
- * Test cases for the DirectPaymentCommandFactory class.
+ * Test cases for the PaymentClearanceCommandFactory class.
  *
  * @package Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories
  */
-class DirectPaymentCommandFactoryTest extends TestCase
+class PaymentClearanceCommandFactoryTest extends TestCase
 {
     /**
      * Test the creation of the attributer by the factory.
@@ -27,10 +27,10 @@ class DirectPaymentCommandFactoryTest extends TestCase
      */
     public function testCreateAttributer(): void
     {
-        $actual = (new DirectPaymentCommandFactory())->createAttributer();
+        $actual = (new PaymentClearanceCommandFactory())->createAttributer();
 
         $this->assertInstanceOf(CommandAttributerContract::class, $actual);
-        $this->assertInstanceOf(DirectPaymentCommandAttributer::class, $actual);
+        $this->assertInstanceOf(PaymentClearanceCommandAttributer::class, $actual);
     }
 
     /**
@@ -40,10 +40,10 @@ class DirectPaymentCommandFactoryTest extends TestCase
      */
     public function testCreateResponseHandler(): void
     {
-        $actual = (new DirectPaymentCommandFactory())->createResponseHandler();
+        $actual = (new PaymentClearanceCommandFactory())->createResponseHandler();
 
         $this->assertInstanceOf(ResponseHandlerAbstract::class, $actual);
-        $this->assertInstanceOf(DirectPaymentCommandResponseHandler::class, $actual);
+        $this->assertInstanceOf(PaymentClearanceCommandResponseHandler::class, $actual);
     }
 
     /**
@@ -53,9 +53,9 @@ class DirectPaymentCommandFactoryTest extends TestCase
      */
     public function testCreateProvider(): void
     {
-        $actual = (new DirectPaymentCommandFactory())->createProvider();
+        $actual = (new PaymentClearanceCommandFactory())->createProvider();
 
         $this->assertInstanceOf(CommandEndpointProviderContract::class, $actual);
-        $this->assertInstanceOf(DirectPaymentCommandEndpointProvider::class, $actual);
+        $this->assertInstanceOf(PaymentClearanceCommandEndpointProvider::class, $actual);
     }
 }
