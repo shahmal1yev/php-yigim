@@ -26,4 +26,15 @@ class CommandFacadeTest extends TestCase
 
         $this->assertInstanceOf(CommandExecutorContract::class, $executor);
     }
+
+    /**
+     * Test "initializationCommand" method returns CommandExecutorContract
+     */
+    public function testStatusCommandReturnsCommandExecutorContract(): void
+    {
+        $facade = new CommandFacade();
+        $executor = $facade->statusCommand();
+
+        $this->assertInstanceOf(CommandExecutorContract::class, $executor);
+    }
 }
