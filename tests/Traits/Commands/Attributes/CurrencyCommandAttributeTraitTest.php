@@ -1,9 +1,9 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidCurrencyException;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CurrencyCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Exceptions\InvalidCurrencyException;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\CurrencyCommandAttributeTrait;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Test cases for the CurrencyCommandAttributeTraitTest class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes
  */
 class CurrencyCommandAttributeTraitTest extends TestCase
 {

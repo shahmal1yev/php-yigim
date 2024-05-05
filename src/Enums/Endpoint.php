@@ -1,11 +1,11 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Enums;
+namespace EasyPay\PHP\Yigim\Enums;
 
 /**
  * Enum class representing the endpoints for various operations in the Yigim payment system.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Enums
+ * @package EasyPay\PHP\Yigim\Enums
  */
 enum Endpoint: string
 {

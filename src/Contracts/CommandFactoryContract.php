@@ -1,8 +1,8 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Contracts;
+namespace EasyPay\PHP\Yigim\Contracts;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
 
 /**
  * CommandFactoryContract interface.

@@ -1,13 +1,13 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes;
 
 /**
  * Trait MessageJsonResponseAttributeTrait
  *
  * Trait for extracting message attribute from JSON responses.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Handlers\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\JsonResponse\Handlers\Attributes
  */
 trait MessageJsonResponseAttributeTrait
 {

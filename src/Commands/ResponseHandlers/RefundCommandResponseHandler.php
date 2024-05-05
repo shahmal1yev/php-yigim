@@ -1,18 +1,18 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers;
+namespace EasyPay\PHP\Yigim\Commands\ResponseHandlers;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseData\CancellationCommandResponseData;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseData\RefundCommandResponseData;
-use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\ResponseData\CancellationCommandResponseData;
+use EasyPay\PHP\Yigim\Commands\ResponseData\RefundCommandResponseData;
+use EasyPay\PHP\Yigim\Contracts\ResponseDataContract;
 
 /**
  * Class RefundCommandResponseHandler
  *
  * Handles the response received after a "payment refund" command and ensures it contains all required fields.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers
+ * @package EasyPay\PHP\Yigim\Commands\ResponseHandlers
  */
 class RefundCommandResponseHandler extends ResponseHandlerAbstract
 {

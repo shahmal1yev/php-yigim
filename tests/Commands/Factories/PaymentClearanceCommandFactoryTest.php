@@ -1,22 +1,22 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories;
+namespace EasyPay\PHP\Yigim\Tests\Commands\Factories;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\PaymentClearanceCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\PaymentClearanceCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\PaymentClearanceCommandFactory;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\Attributers\PaymentClearanceCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\PaymentClearanceCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\Factories\PaymentClearanceCommandFactory;
 use PHPUnit\Framework\TestCase;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\PaymentClearanceCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\PaymentClearanceCommandResponseHandler;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
 
 /**
  * Class PaymentClearanceCommandFactoryTest
  *
  * Test cases for the PaymentClearanceCommandFactory class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories
+ * @package EasyPay\PHP\Yigim\Tests\Commands\Factories
  */
 class PaymentClearanceCommandFactoryTest extends TestCase
 {

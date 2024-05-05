@@ -1,21 +1,21 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\Factories;
+namespace EasyPay\PHP\Yigim\Commands\Factories;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\DirectPaymentCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\DirectPaymentCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\DirectPaymentCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\Attributers\DirectPaymentCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\DirectPaymentCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\DirectPaymentCommandResponseHandler;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Contracts\CommandFactoryContract;
 
 /**
  * Class DirectPaymentCommandFactory
  *
  * Factory for creating attributers, endpoint providers, and response handlers for the "direct payment" command.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Commands\Factories
+ * @package EasyPay\PHP\Yigim\Commands\Factories
  */
 class DirectPaymentCommandFactory implements CommandFactoryContract
 {

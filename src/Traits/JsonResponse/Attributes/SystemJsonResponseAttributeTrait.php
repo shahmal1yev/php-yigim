@@ -1,13 +1,13 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes;
 
 /**
  * Trait SystemJsonResponseAttributeTrait
  *
  * Provides a method to retrieve the system attribute from a JSON response object.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes
  */
 trait SystemJsonResponseAttributeTrait
 {

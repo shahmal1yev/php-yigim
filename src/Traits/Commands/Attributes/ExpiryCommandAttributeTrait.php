@@ -1,17 +1,17 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidExpiryArgument;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidMonthArgument;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidYearArgument;
+use EasyPay\PHP\Yigim\Exceptions\InvalidExpiryArgument;
+use EasyPay\PHP\Yigim\Exceptions\InvalidMonthArgument;
+use EasyPay\PHP\Yigim\Exceptions\InvalidYearArgument;
 
 /**
  * Trait ExpiryCommandAttributeTrait
  *
  * Trait for managing expiry command attribute.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\Commands\Attributes
  */
 trait ExpiryCommandAttributeTrait
 {

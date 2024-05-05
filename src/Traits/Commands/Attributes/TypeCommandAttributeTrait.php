@@ -1,9 +1,9 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\TypeUnsupportedArgumentException;
-use Shahmal1yev\EasyPay\Yigim\Helpers\Arr;
+use EasyPay\PHP\Yigim\Exceptions\TypeUnsupportedArgumentException;
+use EasyPay\PHP\Yigim\Helpers\Arr;
 
 /**
  * Trait TypeCommandAttributeTrait
@@ -11,7 +11,7 @@ use Shahmal1yev\EasyPay\Yigim\Helpers\Arr;
  * Trait containing methods to manage the type attribute of Yigim payment system commands.
  * The type attribute represents the type of the command, such as SMS or DMS.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\Commands\Attributes
  */
 trait TypeCommandAttributeTrait
 {

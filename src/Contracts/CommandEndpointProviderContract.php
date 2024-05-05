@@ -1,15 +1,15 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Contracts;
+namespace EasyPay\PHP\Yigim\Contracts;
 
-use Shahmal1yev\EasyPay\Yigim\Enums\Endpoint;
+use EasyPay\PHP\Yigim\Enums\Endpoint;
 
 /**
  * Interface CommandEndpointProviderContract
  *
  * Interface for providing the endpoint URL for a command in the Yigim payment system.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Contracts
+ * @package EasyPay\PHP\Yigim\Contracts
  */
 interface CommandEndpointProviderContract
 {

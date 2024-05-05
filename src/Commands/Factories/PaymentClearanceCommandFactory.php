@@ -1,21 +1,21 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\Factories;
+namespace EasyPay\PHP\Yigim\Commands\Factories;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\PaymentClearanceCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\PaymentClearanceCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\PaymentClearanceCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\Attributers\PaymentClearanceCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\PaymentClearanceCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\PaymentClearanceCommandResponseHandler;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Contracts\CommandFactoryContract;
 
 /**
  * Class PaymentClearanceCommandFactory
  *
  * Factory for creating attributers, endpoint providers, and response handlers for the "payment clearance" command.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Commands\Factories
+ * @package EasyPay\PHP\Yigim\Commands\Factories
  */
 class PaymentClearanceCommandFactory implements CommandFactoryContract
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\DescriptionCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\DescriptionCommandAttributeTrait;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Test cases for the DescriptionCommandAttributeTraitTest class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes
  */
 class DescriptionCommandAttributeTraitTest extends TestCase
 {

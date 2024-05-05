@@ -1,6 +1,6 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Contracts;
+namespace EasyPay\PHP\Yigim\Contracts;
 
 /**
  * ResponseDataContract interface.

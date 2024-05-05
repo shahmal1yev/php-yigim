@@ -1,9 +1,9 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidCallbackURLException;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CallbackCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Exceptions\InvalidCallbackURLException;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\CallbackCommandAttributeTrait;
 use PHPUnit\Framework\TestCase;
 
 class CallbackCommandAttributeTraitTest extends TestCase

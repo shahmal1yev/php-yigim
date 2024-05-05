@@ -1,6 +1,6 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Helpers;
+namespace EasyPay\PHP\Yigim\Helpers;
 
 class Arr
 {

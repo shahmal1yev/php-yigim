@@ -1,11 +1,11 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidExpiryArgument;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidMonthArgument;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidYearArgument;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\ExpiryCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Exceptions\InvalidExpiryArgument;
+use EasyPay\PHP\Yigim\Exceptions\InvalidMonthArgument;
+use EasyPay\PHP\Yigim\Exceptions\InvalidYearArgument;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\ExpiryCommandAttributeTrait;
 use PHPUnit\Framework\TestCase;
 
 
@@ -14,7 +14,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Test cases for the ExpiryCommandAttributeTrait class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes
  */
 class ExpiryCommandAttributeTraitTest extends TestCase
 {

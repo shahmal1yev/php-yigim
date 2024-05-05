@@ -1,10 +1,10 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Facades;
+namespace EasyPay\PHP\Yigim\Tests\Facades;
 
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandExecutorContract;
-use Shahmal1yev\EasyPay\Yigim\Facades\CommandFacade;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandExecutorContract;
+use EasyPay\PHP\Yigim\Facades\CommandFacade;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Test cases for the CommandFacade class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Facades
+ * @package EasyPay\PHP\Yigim\Tests\Facades
  */
 class CommandFacadeTest extends TestCase
 {

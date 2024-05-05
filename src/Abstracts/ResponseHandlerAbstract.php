@@ -1,11 +1,11 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Abstracts;
+namespace EasyPay\PHP\Yigim\Abstracts;
 
 use JsonException;
-use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHandlerJsonDecodeException;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHasMissingFieldsException;
+use EasyPay\PHP\Yigim\Contracts\ResponseDataContract;
+use EasyPay\PHP\Yigim\Exceptions\ResponseHandlerJsonDecodeException;
+use EasyPay\PHP\Yigim\Exceptions\ResponseHasMissingFieldsException;
 
 abstract class ResponseHandlerAbstract
 {

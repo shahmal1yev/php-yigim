@@ -1,13 +1,13 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes;
 
 /**
  * Trait RrnJsonResponseAttributeTrait
  *
  * Provides a method to retrieve the RRN (Retrieval Reference Number) attribute from a JSON response.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes
  */
 trait RrnJsonResponseAttributeTrait
 {

@@ -1,21 +1,21 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\Factories;
+namespace EasyPay\PHP\Yigim\Commands\Factories;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\StatusCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\StatusCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\StatusCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\Attributers\StatusCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\StatusCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\StatusCommandResponseHandler;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Contracts\CommandFactoryContract;
 
 /**
  * Class StatusCommandFactory
  *
  * Factory for creating attributers, endpoint providers, and response handlers for the "status" command.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Commands\Factories
+ * @package EasyPay\PHP\Yigim\Commands\Factories
  */
 class StatusCommandFactory implements CommandFactoryContract
 {

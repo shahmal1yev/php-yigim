@@ -1,16 +1,16 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders;
+namespace EasyPay\PHP\Yigim\Commands\EndpointProviders;
 
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
-use Shahmal1yev\EasyPay\Yigim\Enums\Endpoint;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Enums\Endpoint;
 
 /**
  * Class CancellationCommandEndpointProvider
  *
  * Endpoint provider implementation for the "payment cancellation" command in the Yigim payment system.
  *
- * @package Shahmal1yev\EasyPay\Yigim\EndpointProviders
+ * @package EasyPay\PHP\Yigim\EndpointProviders
  */
 class CancellationCommandEndpointProvider implements CommandEndpointProviderContract
 {

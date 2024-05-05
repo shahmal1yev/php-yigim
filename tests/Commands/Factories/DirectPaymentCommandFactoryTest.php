@@ -1,22 +1,22 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories;
+namespace EasyPay\PHP\Yigim\Tests\Commands\Factories;
 
 use PHPUnit\Framework\TestCase;
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\DirectPaymentCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\DirectPaymentCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\DirectPaymentCommandFactory;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\DirectPaymentCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\Attributers\DirectPaymentCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\DirectPaymentCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\Factories\DirectPaymentCommandFactory;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\DirectPaymentCommandResponseHandler;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
 
 /**
  * Class DirectPaymentCommandFactoryTest
  *
  * Test cases for the DirectPaymentCommandFactory class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories
+ * @package EasyPay\PHP\Yigim\Tests\Commands\Factories
  */
 class DirectPaymentCommandFactoryTest extends TestCase
 {

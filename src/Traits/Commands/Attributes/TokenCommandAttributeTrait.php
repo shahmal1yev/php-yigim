@@ -1,8 +1,8 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidTokenException;
+use EasyPay\PHP\Yigim\Exceptions\InvalidTokenException;
 
 /**
  * Trait TokenCommandAttributeTrait
@@ -10,7 +10,7 @@ use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidTokenException;
  * Trait containing methods to manage the token attribute of Yigim payment system commands.
  * The token attribute represents the card's unique token (optional).
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\Commands\Attributes
  */
 trait TokenCommandAttributeTrait
 {

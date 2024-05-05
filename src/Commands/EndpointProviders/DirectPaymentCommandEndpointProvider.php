@@ -1,16 +1,16 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders;
+namespace EasyPay\PHP\Yigim\Commands\EndpointProviders;
 
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
-use Shahmal1yev\EasyPay\Yigim\Enums\Endpoint;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Enums\Endpoint;
 
 /**
  * Class DirectPaymentCommandEndpointProvider
  *
  * Endpoint provider implementation for the "direct payment" command in the Yigim payment system.
  *
- * @package Shahmal1yev\EasyPay\Yigim\EndpointProviders
+ * @package EasyPay\PHP\Yigim\EndpointProviders
  */
 class DirectPaymentCommandEndpointProvider implements CommandEndpointProviderContract
 {

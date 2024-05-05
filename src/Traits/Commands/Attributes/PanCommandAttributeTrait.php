@@ -1,13 +1,13 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\Commands\Attributes;
 
 /**
  * Trait PanCommandAttributeTrait
  *
  * This trait provides methods to set and get the PAN (Primary Account Number) attribute for a command.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\Commands\Attributes
  */
 trait PanCommandAttributeTrait
 {

@@ -1,22 +1,22 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories;
+namespace EasyPay\PHP\Yigim\Tests\Commands\Factories;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\RefundCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\RefundCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\RefundCommandFactory;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\Attributers\RefundCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\RefundCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\Factories\RefundCommandFactory;
 use PHPUnit\Framework\TestCase;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\RefundCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\RefundCommandResponseHandler;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
 
 /**
  * Class RefundCommandFactoryTest
  *
  * Test cases for the RefundCommandFactory class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories
+ * @package EasyPay\PHP\Yigim\Tests\Commands\Factories
  */
 class RefundCommandFactoryTest extends TestCase
 {

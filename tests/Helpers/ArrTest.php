@@ -2,7 +2,7 @@
 
 namespace Helpers;
 
-use Shahmal1yev\EasyPay\Yigim\Helpers\Arr;
+use EasyPay\PHP\Yigim\Helpers\Arr;
 use PHPUnit\Framework\TestCase;
 
 class ArrTest extends TestCase

@@ -1,21 +1,21 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Executors;
+namespace EasyPay\PHP\Yigim\Executors;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandExecutorContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\CommandExecutionFailedException;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Contracts\CommandExecutorContract;
+use EasyPay\PHP\Yigim\Contracts\CommandFactoryContract;
+use EasyPay\PHP\Yigim\Contracts\ResponseDataContract;
+use EasyPay\PHP\Yigim\Exceptions\CommandExecutionFailedException;
 
 /**
  * Class CommandExecutor
  *
  * Represents an implementation of CommandExecutorContract used for executing commands.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Executors
+ * @package EasyPay\PHP\Yigim\Executors
  */
 class CommandExecutor implements CommandExecutorContract
 {

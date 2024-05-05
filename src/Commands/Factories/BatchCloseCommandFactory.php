@@ -1,24 +1,24 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\Factories;
+namespace EasyPay\PHP\Yigim\Commands\Factories;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\BatchCloseCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\CancellationCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\BatchCloseCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\CancellationCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\BatchCloseCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\CancellationCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\Attributers\BatchCloseCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\Attributers\CancellationCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\BatchCloseCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\CancellationCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\BatchCloseCommandResponseHandler;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\CancellationCommandResponseHandler;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Contracts\CommandFactoryContract;
 
 /**
  * Class BatchCloseCommandFactory
  *
  * Factory for creating attributers, endpoint providers, and response handlers for the "closing of batch" command.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Commands
+ * @package EasyPay\PHP\Yigim\Commands
  */
 class BatchCloseCommandFactory implements CommandFactoryContract
 {

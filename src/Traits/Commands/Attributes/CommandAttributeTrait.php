@@ -1,9 +1,9 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\XTypeUnsupportedArgumentException;
-use Shahmal1yev\EasyPay\Yigim\Helpers\Arr;
+use EasyPay\PHP\Yigim\Exceptions\XTypeUnsupportedArgumentException;
+use EasyPay\PHP\Yigim\Helpers\Arr;
 
 /**
  * Trait CommandAttributeTrait
@@ -11,7 +11,7 @@ use Shahmal1yev\EasyPay\Yigim\Helpers\Arr;
  * Trait containing common command attributes shared among different Yigim payment system commands.
  * These attributes are used to configure and authenticate payment requests.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\Commands\Attributes
  */
 trait CommandAttributeTrait
 {

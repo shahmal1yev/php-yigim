@@ -1,17 +1,17 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Executors;
+namespace EasyPay\PHP\Yigim\Tests\Executors;
 
 use PHPUnit\Framework\MockObject\Exception;
 use ReflectionClass;
 use ReflectionException;
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\CommandExecutionFailedException;
-use Shahmal1yev\EasyPay\Yigim\Executors\CommandExecutor;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Contracts\CommandFactoryContract;
+use EasyPay\PHP\Yigim\Contracts\ResponseDataContract;
+use EasyPay\PHP\Yigim\Exceptions\CommandExecutionFailedException;
+use EasyPay\PHP\Yigim\Executors\CommandExecutor;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -19,7 +19,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Test cases for the CommandExecutor class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Executors
+ * @package EasyPay\PHP\Yigim\Tests\Executors
  */
 class CommandExecutorTest extends TestCase
 {

@@ -112,4 +112,9 @@ fabric.properties
 # Build data
 /build/
 
+# phpDocumentor
+.phpdoc
+
+# necessarry
+
 # End of https://www.toptal.com/developers/gitignore/api/phpstorm+all,phpunit,composer

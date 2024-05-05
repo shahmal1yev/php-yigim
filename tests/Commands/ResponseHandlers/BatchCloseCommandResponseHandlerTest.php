@@ -1,21 +1,21 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Commands\ResponseHandlers;
+namespace EasyPay\PHP\Yigim\Tests\Commands\ResponseHandlers;
 
 use ReflectionException;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseData\BatchCloseCommandResponseData;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\BatchCloseCommandResponseHandler;
+use EasyPay\PHP\Yigim\Commands\ResponseData\BatchCloseCommandResponseData;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\BatchCloseCommandResponseHandler;
 use PHPUnit\Framework\TestCase;
-use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHandlerJsonDecodeException;
-use Shahmal1yev\EasyPay\Yigim\Exceptions\ResponseHasMissingFieldsException;
+use EasyPay\PHP\Yigim\Contracts\ResponseDataContract;
+use EasyPay\PHP\Yigim\Exceptions\ResponseHandlerJsonDecodeException;
+use EasyPay\PHP\Yigim\Exceptions\ResponseHasMissingFieldsException;
 
 /**
  * Class BatchCloseCommandResponseHandlerTest
  *
  * Handles the response received after a "closing of batch" command and ensures it contains all required fields.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers
+ * @package EasyPay\PHP\Yigim\Commands\ResponseHandlers
  */
 class BatchCloseCommandResponseHandlerTest extends TestCase
 {

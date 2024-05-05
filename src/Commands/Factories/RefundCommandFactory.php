@@ -1,17 +1,17 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\Factories;
+namespace EasyPay\PHP\Yigim\Commands\Factories;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\CancellationCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\RefundCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\CancellationCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\RefundCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\CancellationCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\RefundCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\Attributers\CancellationCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\Attributers\RefundCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\CancellationCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\RefundCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\CancellationCommandResponseHandler;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\RefundCommandResponseHandler;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Contracts\CommandFactoryContract;
 
 /**
  * Class RefundCommandFactory
@@ -19,7 +19,7 @@ use Shahmal1yev\EasyPay\Yigim\Contracts\CommandFactoryContract;
  * Factory class responsible for creating instances of attributes, response handlers, and providers
  * for the initialization command in the Yigim payment system.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Commands
+ * @package EasyPay\PHP\Yigim\Commands
  */
 class RefundCommandFactory implements CommandFactoryContract
 {

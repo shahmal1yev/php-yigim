@@ -1,8 +1,8 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidAmountException;
+use EasyPay\PHP\Yigim\Exceptions\InvalidAmountException;
 
 /**
  * Trait AmountCommandAttributeTrait
@@ -10,7 +10,7 @@ use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidAmountException;
  * Trait containing methods to manage the amount attribute of Yigim payment system commands.
  * The amount attribute represents the payment amount in coins.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\Commands\Attributes
  */
 trait AmountCommandAttributeTrait
 {

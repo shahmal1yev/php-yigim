@@ -1,6 +1,6 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse;
+namespace EasyPay\PHP\Yigim\Traits\JsonResponse;
 
 /**
  * The ResponseDataTrait provides a trait for handling JSON response data.

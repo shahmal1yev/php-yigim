@@ -1,8 +1,8 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Traits\JsonResponse\Attributes;
+namespace EasyPay\PHP\Yigim\Tests\Traits\JsonResponse\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\ReferenceJsonResponseAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes\ReferenceJsonResponseAttributeTrait;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Test cases for the ReferenceJsonResponseAttributeTrait class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Traits\JsonResponse\Attributes
+ * @package EasyPay\PHP\Yigim\Tests\Traits\JsonResponse\Attributes
  */
 class ReferenceJsonResponseAttributeTraitTest extends TestCase
 {

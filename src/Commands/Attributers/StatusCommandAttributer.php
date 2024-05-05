@@ -1,17 +1,17 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\Attributers;
+namespace EasyPay\PHP\Yigim\Commands\Attributers;
 
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\ReferenceCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\CommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\ReferenceCommandAttributeTrait;
 
 /**
  * Class StatusCommandAttributer
  *
  * Represents an implementation of CommandAttributerContract used for "status" commands.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Attributers
+ * @package EasyPay\PHP\Yigim\Attributers
  */
 class StatusCommandAttributer implements CommandAttributerContract
 {

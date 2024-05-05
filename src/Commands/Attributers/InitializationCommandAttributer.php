@@ -1,27 +1,27 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\Attributers;
+namespace EasyPay\PHP\Yigim\Commands\Attributers;
 
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\AmountCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\BillerCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CallbackCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CurrencyCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\DescriptionCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\LanguageCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\ReferenceCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\SaveCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TemplateCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TokenCommandAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TypeCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\AmountCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\BillerCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\CallbackCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\CommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\CurrencyCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\DescriptionCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\LanguageCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\ReferenceCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\SaveCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\TemplateCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\TokenCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\TypeCommandAttributeTrait;
 
 /**
  * Class InitializationCommandAttributer
  *
  * Represents an implementation of CommandAttributerContract used for initializing commands.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Attributers
+ * @package EasyPay\PHP\Yigim\Attributers
  */
 class InitializationCommandAttributer implements CommandAttributerContract
 {

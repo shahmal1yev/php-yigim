@@ -1,13 +1,13 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Contracts;
+namespace EasyPay\PHP\Yigim\Contracts;
 
 /**
  * Interface CommandExecutorContract
  *
  * Represents a contract for executing commands.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Contracts
+ * @package EasyPay\PHP\Yigim\Contracts
  */
 interface CommandExecutorContract
 {

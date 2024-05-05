@@ -1,6 +1,6 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\Commands\Attributes;
 
 use InvalidArgumentException;
 
@@ -10,7 +10,7 @@ use InvalidArgumentException;
  * Trait containing methods to manage the save attribute of Yigim payment system commands.
  * The save attribute indicates whether to save card data (true) or not (false).
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\Commands\Attributes
  */
 trait SaveCommandAttributeTrait
 {

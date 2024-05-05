@@ -1,17 +1,17 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers;
+namespace EasyPay\PHP\Yigim\Commands\ResponseHandlers;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseData\PaymentClearanceCommandResponseData;
-use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\ResponseData\PaymentClearanceCommandResponseData;
+use EasyPay\PHP\Yigim\Contracts\ResponseDataContract;
 
 /**
  * Class PaymentClearanceCommandResponseHandler
  *
  * Handles the response received after a "payment clearance" command and ensures it contains all required fields.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers
+ * @package EasyPay\PHP\Yigim\Commands\ResponseHandlers
  */
 class PaymentClearanceCommandResponseHandler extends ResponseHandlerAbstract
 {

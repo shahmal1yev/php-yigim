@@ -1,8 +1,8 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CscCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\CscCommandAttributeTrait;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
  *
  * This class tests the CscCommandAttributeTrait to ensure that the CSC (Card Security Code) field can be set and retrieved correctly.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes
  */
 class CscCommandAttributeTraitTest extends TestCase
 {

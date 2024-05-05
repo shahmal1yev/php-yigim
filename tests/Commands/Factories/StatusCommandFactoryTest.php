@@ -1,22 +1,22 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories;
+namespace EasyPay\PHP\Yigim\Tests\Commands\Factories;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\StatusCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\StatusCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\StatusCommandFactory;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\Attributers\StatusCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\StatusCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\Factories\StatusCommandFactory;
 use PHPUnit\Framework\TestCase;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\StatusCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\StatusCommandResponseHandler;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
 
 /**
  * Class StatusCommandFactoryTest
  *
  * Test cases for the StatusCommandFactory class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories
+ * @package EasyPay\PHP\Yigim\Tests\Commands\Factories
  */
 class StatusCommandFactoryTest extends TestCase
 {

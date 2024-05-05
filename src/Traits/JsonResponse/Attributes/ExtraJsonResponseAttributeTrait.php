@@ -1,13 +1,13 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes;
 
 /**
  * Trait ExtraJsonResponseAttributeTrait
  *
  * Trait for extracting the "extra" attribute from a JSON response.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes
  */
 trait ExtraJsonResponseAttributeTrait
 {

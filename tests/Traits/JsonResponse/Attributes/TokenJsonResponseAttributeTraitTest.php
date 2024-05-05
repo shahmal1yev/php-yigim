@@ -1,8 +1,8 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Traits\JsonResponse\Attributes;
+namespace EasyPay\PHP\Yigim\Tests\Traits\JsonResponse\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\TokenJsonResponseAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes\TokenJsonResponseAttributeTrait;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Test case for the TokenJsonResponseAttributeTrait trait.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Traits\JsonResponse\Attributes
+ * @package EasyPay\PHP\Yigim\Tests\Traits\JsonResponse\Attributes
  */
 class TokenJsonResponseAttributeTraitTest extends TestCase
 {

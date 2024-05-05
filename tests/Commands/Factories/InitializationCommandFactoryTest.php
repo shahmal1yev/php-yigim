@@ -1,22 +1,22 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories;
+namespace EasyPay\PHP\Yigim\Tests\Commands\Factories;
 
-use Shahmal1yev\EasyPay\Yigim\Abstracts\ResponseHandlerAbstract;
-use Shahmal1yev\EasyPay\Yigim\Commands\Attributers\InitializationCommandAttributer;
-use Shahmal1yev\EasyPay\Yigim\Commands\EndpointProviders\InitializationCommandEndpointProvider;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\InitializationCommandFactory;
+use EasyPay\PHP\Yigim\Abstracts\ResponseHandlerAbstract;
+use EasyPay\PHP\Yigim\Commands\Attributers\InitializationCommandAttributer;
+use EasyPay\PHP\Yigim\Commands\EndpointProviders\InitializationCommandEndpointProvider;
+use EasyPay\PHP\Yigim\Commands\Factories\InitializationCommandFactory;
 use PHPUnit\Framework\TestCase;
-use Shahmal1yev\EasyPay\Yigim\Commands\ResponseHandlers\InitializationCommandResponseHandler;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandAttributerContract;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandEndpointProviderContract;
+use EasyPay\PHP\Yigim\Commands\ResponseHandlers\InitializationCommandResponseHandler;
+use EasyPay\PHP\Yigim\Contracts\CommandAttributerContract;
+use EasyPay\PHP\Yigim\Contracts\CommandEndpointProviderContract;
 
 /**
  * Class InitializationCommandFactoryTest
  *
  * Test cases for the InitializationCommandFactory class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Commands\Factories
+ * @package EasyPay\PHP\Yigim\Tests\Commands\Factories
  */
 class InitializationCommandFactoryTest extends TestCase
 {

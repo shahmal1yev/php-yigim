@@ -5,12 +5,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Shahmal1yev\\EasyPay\\Yigim\\": "src/"
+            "EasyPay\\PHP\\Yigim\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Shahmal1yev\\EasyPay\\Yigim\\Tests\\": "tests/"
+            "EasyPay\\PHP\\Yigim\\Tests\\": "tests/"
         }
     },
     "authors": [
@@ -19,10 +19,9 @@
             "email": "shahmal1yev@mail.ru"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "require": {
-        "php": "8.3",
-        "php-di/php-di": "dev-master",
+        "php": ">=8.3",
         "ext-curl": "*",
         "ext-http": "*"
     },

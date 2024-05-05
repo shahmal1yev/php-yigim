@@ -1,18 +1,18 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\ResponseData;
+namespace EasyPay\PHP\Yigim\Commands\ResponseData;
 
-use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\CodeJsonResponseAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\MessageJsonResponseAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\ResponseDataTrait;
+use EasyPay\PHP\Yigim\Contracts\ResponseDataContract;
+use EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes\CodeJsonResponseAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes\MessageJsonResponseAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\JsonResponse\ResponseDataTrait;
 
 /**
  * Class CancellationCommandResponseData
  *
  * Response data for the "payment cancellation" command.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Commands\ResponseData
+ * @package EasyPay\PHP\Yigim\Commands\ResponseData
  */
 readonly class CancellationCommandResponseData implements ResponseDataContract
 {

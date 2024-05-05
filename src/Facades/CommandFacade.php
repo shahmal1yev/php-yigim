@@ -1,23 +1,23 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Facades;
+namespace EasyPay\PHP\Yigim\Facades;
 
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\BatchCloseCommandFactory;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\CancellationCommandFactory;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\DirectPaymentCommandFactory;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\InitializationCommandFactory;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\PaymentClearanceCommandFactory;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\RefundCommandFactory;
-use Shahmal1yev\EasyPay\Yigim\Commands\Factories\StatusCommandFactory;
-use Shahmal1yev\EasyPay\Yigim\Contracts\CommandExecutorContract;
-use Shahmal1yev\EasyPay\Yigim\Executors\CommandExecutor;
+use EasyPay\PHP\Yigim\Commands\Factories\BatchCloseCommandFactory;
+use EasyPay\PHP\Yigim\Commands\Factories\CancellationCommandFactory;
+use EasyPay\PHP\Yigim\Commands\Factories\DirectPaymentCommandFactory;
+use EasyPay\PHP\Yigim\Commands\Factories\InitializationCommandFactory;
+use EasyPay\PHP\Yigim\Commands\Factories\PaymentClearanceCommandFactory;
+use EasyPay\PHP\Yigim\Commands\Factories\RefundCommandFactory;
+use EasyPay\PHP\Yigim\Commands\Factories\StatusCommandFactory;
+use EasyPay\PHP\Yigim\Contracts\CommandExecutorContract;
+use EasyPay\PHP\Yigim\Executors\CommandExecutor;
 
 /**
  * Class CommandFacade
  *
  * Represents a facade for simplifying command execution.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Facades
+ * @package EasyPay\PHP\Yigim\Facades
  */
 class CommandFacade
 {

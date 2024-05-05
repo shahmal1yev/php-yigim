@@ -1,8 +1,8 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Traits\JsonResponse\Attributes;
+namespace EasyPay\PHP\Yigim\Tests\Traits\JsonResponse\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\MessageJsonResponseAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes\MessageJsonResponseAttributeTrait;
 use PHPUnit\Framework\TestCase;
 
 class MessageJsonResponseAttributeTraitTest extends TestCase

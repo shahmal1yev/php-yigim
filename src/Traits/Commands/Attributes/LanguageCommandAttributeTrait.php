@@ -1,9 +1,9 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidLanguageException;
-use Shahmal1yev\EasyPay\Yigim\Helpers\Arr;
+use EasyPay\PHP\Yigim\Exceptions\InvalidLanguageException;
+use EasyPay\PHP\Yigim\Helpers\Arr;
 
 /**
  * Trait LanguageCommandAttributeTrait
@@ -11,7 +11,7 @@ use Shahmal1yev\EasyPay\Yigim\Helpers\Arr;
  * Trait containing methods to manage the language attribute of Yigim payment system commands.
  * The language attribute represents the language used for the template.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\Commands\Attributes
  */
 trait LanguageCommandAttributeTrait
 {

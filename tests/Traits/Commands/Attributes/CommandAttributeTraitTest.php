@@ -1,10 +1,10 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\XTypeUnsupportedArgumentException;
-use Shahmal1yev\EasyPay\Yigim\Helpers\Arr;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\CommandAttributeTrait;
+use EasyPay\PHP\Yigim\Exceptions\XTypeUnsupportedArgumentException;
+use EasyPay\PHP\Yigim\Helpers\Arr;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\CommandAttributeTrait;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Test cases for the CommandAttributeTrait class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes
  */
 class CommandAttributeTraitTest extends TestCase
 {

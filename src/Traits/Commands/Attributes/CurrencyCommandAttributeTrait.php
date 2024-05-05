@@ -1,8 +1,8 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidCurrencyException;
+use EasyPay\PHP\Yigim\Exceptions\InvalidCurrencyException;
 
 /**
  * Trait CurrencyCommandAttributeTrait
@@ -10,7 +10,7 @@ use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidCurrencyException;
  * Trait containing methods to manage the currency attribute of Yigim payment system commands.
  * The currency attribute represents the numeric ISO 4217 currency code.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\Commands\Attributes
  */
 trait CurrencyCommandAttributeTrait
 {

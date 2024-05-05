@@ -1,10 +1,10 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\TypeUnsupportedArgumentException;
-use Shahmal1yev\EasyPay\Yigim\Helpers\Arr;
-use Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes\TypeCommandAttributeTrait;
+use EasyPay\PHP\Yigim\Exceptions\TypeUnsupportedArgumentException;
+use EasyPay\PHP\Yigim\Helpers\Arr;
+use EasyPay\PHP\Yigim\Traits\Commands\Attributes\TypeCommandAttributeTrait;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Test cases for the TypeCommandAttributeTrait class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Tests\Traits\Commands\Attributes
  */
 class TypeCommandAttributeTraitTest extends TestCase
 {

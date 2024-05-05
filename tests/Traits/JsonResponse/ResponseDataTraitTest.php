@@ -1,8 +1,8 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Tests\Traits\JsonResponse;
+namespace EasyPay\PHP\Yigim\Tests\Traits\JsonResponse;
 
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\ResponseDataTrait;
+use EasyPay\PHP\Yigim\Traits\JsonResponse\ResponseDataTrait;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
  *
  * Test cases for the ResponseDataTrait class.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Tests\Traits\JsonResponse
+ * @package EasyPay\PHP\Yigim\Tests\Traits\JsonResponse
  */
 class ResponseDataTraitTest extends TestCase
 {

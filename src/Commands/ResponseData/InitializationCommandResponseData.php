@@ -1,19 +1,19 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Commands\ResponseData;
+namespace EasyPay\PHP\Yigim\Commands\ResponseData;
 
-use Shahmal1yev\EasyPay\Yigim\Contracts\ResponseDataContract;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\CodeJsonResponseAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\MessageJsonResponseAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\Attributes\UrlJsonResponseAttributeTrait;
-use Shahmal1yev\EasyPay\Yigim\Traits\JsonResponse\ResponseDataTrait;
+use EasyPay\PHP\Yigim\Contracts\ResponseDataContract;
+use EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes\CodeJsonResponseAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes\MessageJsonResponseAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\JsonResponse\Attributes\UrlJsonResponseAttributeTrait;
+use EasyPay\PHP\Yigim\Traits\JsonResponse\ResponseDataTrait;
 
 /**
  * Class InitializationCommandResponseData
  *
  * Response data for the initialization command.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Commands\ResponseData
+ * @package EasyPay\PHP\Yigim\Commands\ResponseData
  */
 readonly class InitializationCommandResponseData implements ResponseDataContract
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes;
+namespace EasyPay\PHP\Yigim\Traits\Commands\Attributes;
 
-use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidCallbackURLException;
+use EasyPay\PHP\Yigim\Exceptions\InvalidCallbackURLException;
 
 /**
  * Trait CallbackCommandAttributeTrait
@@ -10,7 +10,7 @@ use Shahmal1yev\EasyPay\Yigim\Exceptions\InvalidCallbackURLException;
  * Trait containing methods to manage the callback attribute of Yigim payment system commands.
  * The callback attribute represents the webhook URL triggered when the payment status changes.
  *
- * @package Shahmal1yev\EasyPay\Yigim\Traits\Commands\Attributes
+ * @package EasyPay\PHP\Yigim\Traits\Commands\Attributes
  */
 trait CallbackCommandAttributeTrait
 {
