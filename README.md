@@ -59,4 +59,4 @@ echo $responseContract->getUrl();
 
 ## Licence
 
-This project is licensed under the MIT License. For more information, see the LICENSE file.
+This project is licensed under the MIT License. For more information, see the [LICENSE](https://opensource.org/license/MIT).
