@@ -1,16 +1,15 @@
 # EasyPay PHP/Yığım
 
 [![Version](https://img.shields.io/badge/Version-1.0-blue.svg)](https://semver.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Documentation](https://img.shields.io/badge/API-Documentation-green.svg)](https://easypayy.github.io/namespaces/easypay-php-yigim.html)
-[![Author](https://img.shields.io/badge/Author-Github-purple.svg)](https://github.com/shahmal1yev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Documentation](https://img.shields.io/badge/API-Documentation-purple.svg)](https://shahmal1yev.github.io)
 
-A PHP package that makes it easy to integrate [Yığım Payment System](https://yigim.az/) into your projects.
+A PHP package that makes it easy to integrate [**Yığım Payment System**](https://yigim.az/) into your projects.
 
 ![YIĞIM Logo](https://yigim.az/uploads/images/1-02.png)
 
 ## Documentation
-You can read the API documentation from here. Feel free to submit a pull request to [docs](https://github.com/easypayy/easypayy.github.io) if you have something you'd like to add.
+You can read the API documentation from [here](https://shahmal1yev.github.io). Feel free to submit a pull request to [docs](https://github.com/shahmal1yev/shahmal1yev.github.io) if you have something you'd like to add.
 
 ## Requirements
 ```json
@@ -22,7 +21,7 @@ You can read the API documentation from here. Feel free to submit a pull request
 ## Installation
 
 ```php
-composer require easypayy/php-yigim
+composer require shahmal1yev/php-yigim
 ```
 
 ## Usage
