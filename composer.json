@@ -19,7 +19,7 @@
             "email": "shahmal1yev@mail.ru"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "beta",
     "require": {
         "php": ">=8.3",
         "ext-curl": "*",
@@ -27,5 +27,13 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^11.0@dev"
+    },
+    "scripts": {
+	"test": "vendor/bin/phpunit",
+    	"test-unit": "vendor/bin/phpunit --testsuite 'Unit'",
+	"test-feature": "vendor/bin/phpunit --testsuite Feature"
+    },
+    "extra": {
+    	"readme": "https://shahmal1yev.github.io/packages/EasyPay-PHP.html"
     }
 }
